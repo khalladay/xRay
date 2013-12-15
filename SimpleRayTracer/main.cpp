@@ -42,39 +42,68 @@ void writeArrayToFile(vec3 array[512][512])
     ofs.close();
 }
 
-vec3 trace(Ray* r, RaycastHit* hit)
+bool trace(Ray* r, RaycastHit* hit, vec3* col)
 {
-    Sphere sphere1(vec3(0.0, 0.0, -8.0), 4.0f, 1);
-    Sphere sphere2(vec3(0.0, 0.0, 0.0), 4.0f, 1);
-    Sphere sphere3(vec3(0.0, 0.0, 8.0), 4.0f, 1);
-    Plane plane(vec3(0.0), normalize(vec3(0.0, -1.0,0.0)));
-    vec3 LIGHT_DIR = vec3(0.5, 0.5, 0.5);
+    Sphere sphere1(vec3(0.0, 2.0, -10.0), 4.0f, 1);
+    Sphere sphere2(vec3(0.0, 2.0, 0.0), 4.0f, 1);
+    Sphere sphere3(vec3(0.0, 2.0, 10.0), 4.0f, 1);
+    Plane plane(vec3(0.0, 0.0, 0.0), normalize(vec3(0.0, -1.0,0.0)));
+    vec3 LIGHT_DIR = vec3(0.0, 1.0, 0.0);
 
-    vec3 col = vec3(0.01);
     
     if (plane.intersect(r, hit))
     {
-        if (hit->t < r->tmax)
+        if (hit->t < r->tmax && hit->t > 0.0)
         {
-            col = vec3(hit->t / 40.0f, 1.0, 0.0);
             vec3 h = r->origin + r->direction*hit->t;
             
             h=h*0.2f; //controls size of checkerboard bands
             
             //generate checkerboard texture
             //if h.x + h.z is odd, shade white, else shade black
-            col = vec3( (int)(ceil(h.x) + ceil(h.z))&1?(vec3(0.0f, 0.0f, 0.0f)):(vec3(1.0f, 1.0f, 1.0f)));
+            vec3 floorcol = vec3( (int)(ceil(h.x) + ceil(h.z))&1?(vec3(0.0f, 0.0f, 0.0f)):(vec3(1.0f, 1.0f, 1.0f)));
+            
+            Ray r2(r->origin + r->direction*hit->t, reflect(r->direction, hit->contactNormal), 0.0f, 100.0f);
+            RaycastHit hit2;
+            hit2.t = 101.0f;
+            vec3 bounceCol = vec3(0.0);
+            
+            if (trace(&r2, &hit2, &bounceCol))
+            {
+                if (hit2.t < r2.tmax && hit2.t > 0.0)
+                {
+                    *col = (floorcol + bounceCol + bounceCol) / 3.0f;
+                }
+                else *col = floorcol;
+            }
+            else *col = floorcol;
         }
     }
     
-    float t = r->tmax;
+    
+    float t = hit->t;
     
     if (sphere1.intersect(r, hit))
     {
         if (hit->t < t)
         {
-            col = vec3(1.0)*max(0.0f, dot(LIGHT_DIR,hit->contactNormal));
+            vec3 sphereCol = vec3(1.0,0.0,1.0)*max(0.0f, dot(LIGHT_DIR,hit->contactNormal));
             t = hit->t;
+            
+            Ray r2(r->origin + r->direction*hit->t, reflect(r->direction, hit->contactNormal), 0.0f, 100.0f);
+            RaycastHit hit2;
+            hit2.t = 101.0f;
+            vec3 bounceCol = vec3(0.0);
+            
+            if (trace(&r2, &hit2, &bounceCol))
+            {
+                if (hit2.t < r2.tmax)
+                {
+                    *col = (sphereCol + (bounceCol*0.4f)) / 2.0f;
+                }
+                else *col = sphereCol;
+            }
+            else *col = sphereCol;
         }
     }
     
@@ -82,21 +111,53 @@ vec3 trace(Ray* r, RaycastHit* hit)
     {
         if (hit->t < t)
         {
-            col = vec3(1.0)*max(0.0f, dot(LIGHT_DIR,hit->contactNormal));
+            vec3 sphereCol = vec3(0.0,0.0,1.0)*max(0.0f, dot(LIGHT_DIR,hit->contactNormal));
             t = hit->t;
+            
+            Ray r2(r->origin + r->direction*hit->t, reflect(r->direction, hit->contactNormal), 0.0f, 100.0f);
+            RaycastHit hit2;
+            hit2.t = 101.0f;
+            vec3 bounceCol = vec3(0.0);
+            
+            if (trace(&r2, &hit2, &bounceCol))
+            {
+                if (hit2.t < r2.tmax)
+                {
+                    *col = (sphereCol + (bounceCol*0.4f)) / 2.0f;
+                }
+                else *col = sphereCol;
+            }
+            else *col = sphereCol;
         }
     }
+
     
     if (sphere3.intersect(r, hit))
     {
         if (hit->t < t)
         {
-            col = vec3(1.0)*max(0.0f, dot(LIGHT_DIR,hit->contactNormal));
+            vec3 sphereCol = vec3(1.0,0.0,0.0)*max(0.0f, dot(LIGHT_DIR,hit->contactNormal));
             t = hit->t;
+            
+            Ray r2(r->origin + r->direction*hit->t, reflect(r->direction, hit->contactNormal), 0.0f, 100.0f);
+            RaycastHit hit2;
+            hit2.t = 101.0f;
+            vec3 bounceCol = vec3(0.0);
+            
+            if (trace(&r2, &hit2, &bounceCol))
+            {
+                if (hit2.t < r2.tmax)
+                {
+                    *col = (sphereCol + (bounceCol*0.4f)) / 2.0f;
+                }
+                else *col = sphereCol;
+            }
+            else *col = sphereCol;
         }
     }
+
     
-    return col;
+    return hit->t < r->tmax && hit->t > 0.0;
 }
 
 int main(int argc, const char * argv[])
@@ -109,8 +170,9 @@ int main(int argc, const char * argv[])
         for (int x = 0; x < 512; x++)
         {
             vec2 uv = -1.0f + 2.0f * vec2(x,y) / vec2(512.0f);
+            
             const vec3 CAM_UP = normalize(vec3(0.0, -1.0, 0.0));
-            vec3 CAM_POS = vec3(12.0, 10.0,12.0);
+            vec3 CAM_POS = vec3(13.0, 14.0,10.0);
             vec3 CAM_LOOKPOINT = vec3(0.0, 0.0, 0.0);
             
             vec3 lookDirection = normalize(CAM_LOOKPOINT - CAM_POS);
@@ -127,9 +189,16 @@ int main(int argc, const char * argv[])
             
             RaycastHit hit;
             
-            col = trace(&r, &hit);
-            Ray r2(r.origin + hit.t * r.direction, hit.contactNormal, 0.01f, 100.0f);
-            col = col * trace(&r2, &hit);
+            if (trace(&r, &hit, &col))
+            {
+             
+            }
+            else
+            {
+                col = vec3(0.0, 0.0, uv.y);
+            }
+            
+           
             
             image[x][y] = col;
         }

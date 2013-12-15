@@ -15,6 +15,7 @@
 		A19D7FAA185AB0630009D962 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FA8185AB0630009D962 /* Sphere.cpp */; };
 		A19D7FAD185C198A0009D962 /* Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FAB185C198A0009D962 /* Plane.cpp */; };
 		A19D7FB0185CF7390009D962 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FAE185CF7390009D962 /* Cube.cpp */; };
+		A19D7FB5185E17A90009D962 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FB3185E17A90009D962 /* Material.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -271,6 +272,8 @@
 		A19D7FAC185C198A0009D962 /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
 		A19D7FAE185CF7390009D962 /* Cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
 		A19D7FAF185CF7390009D962 /* Cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
+		A19D7FB3185E17A90009D962 /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Material.cpp; sourceTree = "<group>"; };
+		A19D7FB4185E17A90009D962 /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +307,7 @@
 		A19D7EAE1859700F0009D962 /* SimpleRayTracer */ = {
 			isa = PBXGroup;
 			children = (
+				A19D7FB2185E177A0009D962 /* Materials */,
 				A19D7F9E185A9D480009D962 /* Traceables */,
 				A19D7EAF1859700F0009D962 /* main.cpp */,
 				A19D7EB11859700F0009D962 /* SimpleRayTracer.1 */,
@@ -602,6 +606,15 @@
 			name = "Implicit Objects";
 			sourceTree = "<group>";
 		};
+		A19D7FB2185E177A0009D962 /* Materials */ = {
+			isa = PBXGroup;
+			children = (
+				A19D7FB3185E17A90009D962 /* Material.cpp */,
+				A19D7FB4185E17A90009D962 /* Material.h */,
+			);
+			name = Materials;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -657,6 +670,7 @@
 				A19D7FA4185A9E570009D962 /* Ray.cpp in Sources */,
 				A19D7EB01859700F0009D962 /* main.cpp in Sources */,
 				A19D7FB0185CF7390009D962 /* Cube.cpp in Sources */,
+				A19D7FB5185E17A90009D962 /* Material.cpp in Sources */,
 				A19D7FA1185A9D6A0009D962 /* Traceable.cpp in Sources */,
 				A19D7FAA185AB0630009D962 /* Sphere.cpp in Sources */,
 				A19D7FA7185AAE950009D962 /* RaycastHit.cpp in Sources */,

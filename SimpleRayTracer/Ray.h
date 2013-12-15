@@ -23,7 +23,7 @@ public:
     Ray(vec3 orig, vec3 dir, float min, float max) :
     origin(orig), direction(dir),tmin(min), tmax(max)
     {
-        direction = normalize(dir);
+        direction = (dir);
     }
     
     ~Ray(){}
