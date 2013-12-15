@@ -16,6 +16,7 @@ bool Plane::intersect(Ray *r, RaycastHit* hit)
     {
         vec3 toOrigin = center - r->origin;
         float d = dot(toOrigin, n)/denom;
+        hit->t = d;
         return d >=0;
     }
     

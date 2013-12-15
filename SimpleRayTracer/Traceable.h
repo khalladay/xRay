@@ -18,7 +18,16 @@ class Traceable
 {
 public:
     int objectId;
-
+    mat4 worldToObject;
+    mat4 objectToWorld;
+    
+    Traceable(){}
+    
+    Traceable(mat4 transformMatrix, int id)
+    {
+        objectToWorld = inverse(transformMatrix);
+    }
+    
     virtual bool intersect(Ray* r, RaycastHit* hit) = 0;
     
     ~Traceable(){}

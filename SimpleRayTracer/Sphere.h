@@ -23,6 +23,8 @@ public:
     {
         objectId = id;
         radius2 = radius*radius;
+        
+        
     }
 };
 
