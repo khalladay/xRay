@@ -11,13 +11,16 @@
 
 #include "Traceable.h"
 
-class Plane : Traceable
+class Plane : public Traceable
 {
 public:
     vec3 center;
     vec3 n;
     
-    Plane(vec3 position, vec3 normal) : center(position), n(normal){}
+    Plane(vec3 position, vec3 normal, Material *mat) : center(position), n(normal)
+    {
+        material = mat;
+    }
     
     bool intersect(Ray* r, RaycastHit* hit);
 

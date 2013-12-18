@@ -15,8 +15,9 @@
 		A19D7FAA185AB0630009D962 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FA8185AB0630009D962 /* Sphere.cpp */; };
 		A19D7FAD185C198A0009D962 /* Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FAB185C198A0009D962 /* Plane.cpp */; };
 		A19D7FB0185CF7390009D962 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FAE185CF7390009D962 /* Cube.cpp */; };
-		A19D7FB5185E17A90009D962 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FB3185E17A90009D962 /* Material.cpp */; };
 		A19D7FB91860955A0009D962 /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FB71860955A0009D962 /* Light.cpp */; };
+		A19D7FBC18613D950009D962 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FBA18613D950009D962 /* Scene.cpp */; };
+		A19D7FBF18613ED60009D962 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FBD18613ED60009D962 /* Camera.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -273,10 +274,15 @@
 		A19D7FAC185C198A0009D962 /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
 		A19D7FAE185CF7390009D962 /* Cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
 		A19D7FAF185CF7390009D962 /* Cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
-		A19D7FB3185E17A90009D962 /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Material.cpp; sourceTree = "<group>"; };
 		A19D7FB4185E17A90009D962 /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
 		A19D7FB71860955A0009D962 /* Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
 		A19D7FB81860955A0009D962 /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+		A19D7FBA18613D950009D962 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		A19D7FBB18613D950009D962 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		A19D7FBD18613ED60009D962 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		A19D7FBE18613ED60009D962 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		A19D7FC4186155250009D962 /* CheckerMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckerMaterial.h; sourceTree = "<group>"; };
+		A19D7FC7186156B50009D962 /* DiffuseMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiffuseMaterial.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +325,10 @@
 				A19D7FA3185A9E570009D962 /* Ray.h */,
 				A19D7FA5185AAE950009D962 /* RaycastHit.cpp */,
 				A19D7FA6185AAE950009D962 /* RaycastHit.h */,
+				A19D7FBA18613D950009D962 /* Scene.cpp */,
+				A19D7FBB18613D950009D962 /* Scene.h */,
+				A19D7FBD18613ED60009D962 /* Camera.cpp */,
+				A19D7FBE18613ED60009D962 /* Camera.h */,
 			);
 			path = SimpleRayTracer;
 			sourceTree = "<group>";
@@ -613,8 +623,9 @@
 		A19D7FB2185E177A0009D962 /* Materials */ = {
 			isa = PBXGroup;
 			children = (
-				A19D7FB3185E17A90009D962 /* Material.cpp */,
 				A19D7FB4185E17A90009D962 /* Material.h */,
+				A19D7FC4186155250009D962 /* CheckerMaterial.h */,
+				A19D7FC7186156B50009D962 /* DiffuseMaterial.h */,
 			);
 			name = Materials;
 			sourceTree = "<group>";
@@ -683,10 +694,11 @@
 				A19D7FAD185C198A0009D962 /* Plane.cpp in Sources */,
 				A19D7FA4185A9E570009D962 /* Ray.cpp in Sources */,
 				A19D7EB01859700F0009D962 /* main.cpp in Sources */,
+				A19D7FBF18613ED60009D962 /* Camera.cpp in Sources */,
 				A19D7FB0185CF7390009D962 /* Cube.cpp in Sources */,
-				A19D7FB5185E17A90009D962 /* Material.cpp in Sources */,
 				A19D7FA1185A9D6A0009D962 /* Traceable.cpp in Sources */,
 				A19D7FAA185AB0630009D962 /* Sphere.cpp in Sources */,
+				A19D7FBC18613D950009D962 /* Scene.cpp in Sources */,
 				A19D7FA7185AAE950009D962 /* RaycastHit.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

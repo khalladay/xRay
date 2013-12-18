@@ -10,7 +10,7 @@
 #define __SimpleRayTracer__Sphere__
 #include "Traceable.h"
 
-class Sphere : Traceable
+class Sphere : public Traceable
 {
 public:
     vec3 center;
@@ -19,12 +19,11 @@ public:
     
     bool intersect(Ray* r, RaycastHit* hit);
 
-    Sphere(vec3 pos, float rad, int id) : center(pos), radius(rad)
+    Sphere(vec3 pos, float rad, int id, Material* m) : center(pos), radius(rad)
     {
         objectId = id;
         radius2 = radius*radius;
-        
-        
+        material = m;
     }
 };
 

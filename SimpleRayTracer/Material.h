@@ -14,7 +14,20 @@
 using namespace glm;
 class Material
 {
-    vec3 sample(vec3 samplePoint);
+public:
+    
+    vec3 col;
+    
+    Material()
+    {
+        col = vec3(1.0f);
+    }
+    
+    Material(vec3 color) : col(color)
+    {
+    }
+    
+    virtual vec3 sample(const vec3& samplePoint, const vec3& normal, const vec3& lightDirection, const vec3& lightPosition, const vec3& viewDirection) = 0;
 };
 
 #endif /* defined(__Clusterwink__Material__) */

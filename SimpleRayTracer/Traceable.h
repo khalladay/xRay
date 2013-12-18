@@ -12,6 +12,8 @@
 #include "RaycastHit.h"
 #include "Ray.h"
 #include "glm.hpp"
+#include "Material.h"
+#include "DiffuseMaterial.h"
 
 using namespace glm;
 class Traceable
@@ -21,9 +23,14 @@ public:
     mat4 worldToObject;
     mat4 objectToWorld;
     
-    Traceable(){}
+    Material *material;
     
-    Traceable(mat4 transformMatrix, int id)
+    Traceable()
+    {
+        material = new DiffuseMaterial(vec3(1.0f));
+    }
+    
+    Traceable(mat4 transformMatrix, Material* mat, int id) : material(mat)
     {
         objectToWorld = inverse(transformMatrix);
     }
