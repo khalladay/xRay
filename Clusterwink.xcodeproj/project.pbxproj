@@ -283,6 +283,7 @@
 		A19D7FBE18613ED60009D962 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		A19D7FC4186155250009D962 /* CheckerMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckerMaterial.h; sourceTree = "<group>"; };
 		A19D7FC7186156B50009D962 /* DiffuseMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiffuseMaterial.h; sourceTree = "<group>"; };
+		A19D7FC9186168D40009D962 /* SpecularMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecularMaterial.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -626,6 +627,7 @@
 				A19D7FB4185E17A90009D962 /* Material.h */,
 				A19D7FC4186155250009D962 /* CheckerMaterial.h */,
 				A19D7FC7186156B50009D962 /* DiffuseMaterial.h */,
+				A19D7FC9186168D40009D962 /* SpecularMaterial.h */,
 			);
 			name = Materials;
 			sourceTree = "<group>";

@@ -15,8 +15,9 @@
 #include "Plane.h"
 #include "Scene.h"
 #include "CheckerMaterial.h"
+#include "SpecularMaterial.h"
 
-#define NUM_BOUNCES 5
+#define NUM_BOUNCES 3
 using namespace glm;
 
 float cube(vec3 point, vec3 box, vec3 boxPos)
@@ -27,7 +28,7 @@ float cube(vec3 point, vec3 box, vec3 boxPos)
 void writeArrayToFile(vec3 array[512][512])
 {
     std::ofstream ofs;
-    ofs.open("/Users/kylehalladay/Desktop/testtrace2.ppm");
+    ofs.open("/Users/kylehalladay/Desktop/testtrace4.ppm");
     ofs << "P6\n" << 512 << " " << 512 << "\n255\n";
     
     for (uint32_t j = 0; j < 512; ++j) {
@@ -47,7 +48,7 @@ void writeArrayToFile(vec3 array[512][512])
 
 void trace(Ray* r, RaycastHit* hit, vec3* col, float uvy, Scene* scn, int bounces)
 {
-    vec3 LIGHT_DIR = normalize(vec3(0.0, 1.0, 0.0));
+    vec3 LIGHT_DIR = normalize(vec3(0.5, 1.0, 0.0));
     bool didHit = false;
     
     float t = r->tmax+1.0f;
@@ -104,7 +105,7 @@ void trace(Ray* r, RaycastHit* hit, vec3* col, float uvy, Scene* scn, int bounce
     if ( !didHit )
     {
         hit->t = 101.0f;
-        *col = vec3(0.0f, 0.0f, uvy);
+        *col = vec3(0.0f, 0.0f, 0.0f);
     }
     
     return;
@@ -115,35 +116,57 @@ int main(int argc, const char * argv[])
     vec3 image[512][512];
     
     Scene scene(vec3(13.0f, 2.0f, 10.0f), vec3(0.0f), vec3(0.0f, -1.0f, 0.0f));
-    scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, -10.0f), 4.0f, 1,new DiffuseMaterial(vec3(1.0f, 0.0f, 0.0f))));
-    scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, 0.0f), 4.0f, 1,new DiffuseMaterial(vec3(0.0f, 1.0f, 1.0f))));
-    scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, 10.0f), 4.0f, 1, new DiffuseMaterial(vec3(1.0f, 0.0f, 1.0f))));
+    scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, -10.0f), 4.0f, 1,new SpecularMaterial(vec3(1.0f, 0.0f, 0.0f), vec3(1.0f))));
+    scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, 0.0f), 4.0f, 1,new SpecularMaterial(vec3(0.0f, 1.0f, 1.0f), vec3(1.0f))));
+    scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, 10.0f), 4.0f, 1, new SpecularMaterial(vec3(1.0f, 0.0f, 1.0f), vec3(1.0f))));
     scene.traceables.push_back(new Plane(vec3(0.0, 0.0, 0.0), normalize(vec3(0.0, -1.0,0.0)), new CheckerMaterial()));
 
+    
+    vec3 c0,c1,c2,c3;
     
     for (int y = 0; y < 512; y++)
     {
         for (int x = 0; x < 512; x++)
         {
-            vec2 uv = -1.0f + 2.0f * vec2(x,y) / vec2(512.0f);
-            
+            vec2 uv0 = -1.0f + 2.0f * vec2(x-0.5f,y) / vec2(512.0f);
+            vec2 uv1 = -1.0f + 2.0f * vec2(x+0.5f,y) / vec2(512.0f);
+            vec2 uv2 = -1.0f + 2.0f * vec2(x,y-0.5f) / vec2(512.0f);
+            vec2 uv3 = -1.0f + 2.0f * vec2(x,y+0.5f) / vec2(512.0f);
+
             vec3 lookDirection = normalize(scene.cam.lookPoint - scene.cam.position);
             vec3 viewPlaneU = normalize(cross(scene.cam.up, lookDirection));
             vec3 viewPlaneV = cross(lookDirection, viewPlaneU);
             vec3 viewCenter = lookDirection + scene.cam.position;
             
-            vec3 fragWorldPos = viewCenter + (uv.x * viewPlaneU * 1.0f) + (uv.y * viewPlaneV);
-            vec3 fragWorldToCamPos = normalize(fragWorldPos - scene.cam.position);
-            
+            vec3 fragWorldPos0 = viewCenter + (uv0.x * viewPlaneU * 1.0f) + (uv0.y * viewPlaneV);
+            vec3 fragWorldPos1 = viewCenter + (uv1.x * viewPlaneU * 1.0f) + (uv1.y * viewPlaneV);
+            vec3 fragWorldPos2 = viewCenter + (uv2.x * viewPlaneU * 1.0f) + (uv2.y * viewPlaneV);
+            vec3 fragWorldPos3 = viewCenter + (uv3.x * viewPlaneU * 1.0f) + (uv3.y * viewPlaneV);
+
+            vec3 fragWorldToCamPos0 = normalize(fragWorldPos0 - scene.cam.position);
+            vec3 fragWorldToCamPos1 = normalize(fragWorldPos1 - scene.cam.position);
+            vec3 fragWorldToCamPos2 = normalize(fragWorldPos2 - scene.cam.position);
+            vec3 fragWorldToCamPos3 = normalize(fragWorldPos3 - scene.cam.position);
+
             vec3 col = vec3(0.3);
             
-            Ray r(scene.cam.position, normalize(fragWorldToCamPos), 0.0f, 100.0f);
+            Ray r0(scene.cam.position, normalize(fragWorldToCamPos0), 0.0f, 100.0f);
+            Ray r1(scene.cam.position, normalize(fragWorldToCamPos1), 0.0f, 100.0f);
+            Ray r2(scene.cam.position, normalize(fragWorldToCamPos2), 0.0f, 100.0f);
+            Ray r3(scene.cam.position, normalize(fragWorldToCamPos3), 0.0f, 100.0f);
+
+            RaycastHit h0;
+            RaycastHit h1;
+            RaycastHit h2;
+            RaycastHit h3;
+
             
-            RaycastHit hit;
-            
-            trace(&r, &hit, &col, uv.y, &scene, NUM_BOUNCES);
-            
-            image[x][y] = col;
+            trace(&r0, &h0, &c0, uv0.y, &scene, NUM_BOUNCES);
+            trace(&r1, &h1, &c1, uv1.y, &scene, NUM_BOUNCES);
+            trace(&r2, &h2, &c2, uv2.y, &scene, NUM_BOUNCES);
+            trace(&r3, &h3, &c3, uv3.y, &scene, NUM_BOUNCES);
+
+            image[x][y] = (c0+c1+c2+c3)/4.0f;
         }
     }
     
