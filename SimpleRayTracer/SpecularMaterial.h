@@ -25,7 +25,8 @@ public:
     vec3 sample(const vec3& samplePoint, const vec3& normal, const vec3& lightDirection, const vec3& lightPosition, const vec3& viewDirection)
     {
         vec3 diffuseTerm = col * max(0.0f, dot(lightDirection, normal));
-        vec3 specTerm = specCol * max(0.0f, dot(reflect (-lightDirection, normal), normalize(viewDirection))) * pow(max(0.0f, dot(normal, lightDirection)), 2.0f);
+        vec3 r =-normalize(reflect (viewDirection, normal));
+        vec3 specTerm = specCol * pow(max(0.0f, dot(r, lightDirection)), 80.0f);
         return diffuseTerm+specTerm;
     }
     

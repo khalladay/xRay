@@ -17,7 +17,7 @@
 #include "CheckerMaterial.h"
 #include "SpecularMaterial.h"
 
-#define NUM_BOUNCES 3
+#define NUM_BOUNCES 4
 using namespace glm;
 
 float cube(vec3 point, vec3 box, vec3 boxPos)
@@ -28,7 +28,7 @@ float cube(vec3 point, vec3 box, vec3 boxPos)
 void writeArrayToFile(vec3 array[512][512])
 {
     std::ofstream ofs;
-    ofs.open("/Users/kylehalladay/Desktop/testtrace4.ppm");
+    ofs.open("/Users/kylehalladay/Desktop/testtrace5.ppm");
     ofs << "P6\n" << 512 << " " << 512 << "\n255\n";
     
     for (uint32_t j = 0; j < 512; ++j) {
@@ -48,7 +48,7 @@ void writeArrayToFile(vec3 array[512][512])
 
 void trace(Ray* r, RaycastHit* hit, vec3* col, float uvy, Scene* scn, int bounces)
 {
-    vec3 LIGHT_DIR = normalize(vec3(0.5, 1.0, 0.0));
+    vec3 LIGHT_DIR = normalize(vec3(1.0, 0.2, 0.0));
     bool didHit = false;
     
     float t = r->tmax+1.0f;
@@ -105,7 +105,7 @@ void trace(Ray* r, RaycastHit* hit, vec3* col, float uvy, Scene* scn, int bounce
     if ( !didHit )
     {
         hit->t = 101.0f;
-        *col = vec3(0.0f, 0.0f, 0.0f);
+        *col = vec3(0.0f, 0.0f,uvy);
     }
     
     return;
@@ -115,7 +115,7 @@ int main(int argc, const char * argv[])
 {
     vec3 image[512][512];
     
-    Scene scene(vec3(13.0f, 2.0f, 10.0f), vec3(0.0f), vec3(0.0f, -1.0f, 0.0f));
+    Scene scene(vec3(13.0f, 3.0f, 10.0f), vec3(0.0f), vec3(0.0f, -1.0f, 0.0f));
     scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, -10.0f), 4.0f, 1,new SpecularMaterial(vec3(1.0f, 0.0f, 0.0f), vec3(1.0f))));
     scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, 0.0f), 4.0f, 1,new SpecularMaterial(vec3(0.0f, 1.0f, 1.0f), vec3(1.0f))));
     scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, 10.0f), 4.0f, 1, new SpecularMaterial(vec3(1.0f, 0.0f, 1.0f), vec3(1.0f))));
