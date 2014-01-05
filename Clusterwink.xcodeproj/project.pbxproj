@@ -18,6 +18,8 @@
 		A19D7FB91860955A0009D962 /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FB71860955A0009D962 /* Light.cpp */; };
 		A19D7FBC18613D950009D962 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FBA18613D950009D962 /* Scene.cpp */; };
 		A19D7FBF18613ED60009D962 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A19D7FBD18613ED60009D962 /* Camera.cpp */; };
+		A1EF08941878777D000E3A9F /* TriMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08921878777D000E3A9F /* TriMesh.cpp */; };
+		A1EF089E1878AA79000E3A9F /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF089C1878AA79000E3A9F /* Triangle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -284,6 +286,16 @@
 		A19D7FC4186155250009D962 /* CheckerMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckerMaterial.h; sourceTree = "<group>"; };
 		A19D7FC7186156B50009D962 /* DiffuseMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiffuseMaterial.h; sourceTree = "<group>"; };
 		A19D7FC9186168D40009D962 /* SpecularMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecularMaterial.h; sourceTree = "<group>"; };
+		A1EF08921878777D000E3A9F /* TriMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TriMesh.cpp; sourceTree = "<group>"; };
+		A1EF08931878777D000E3A9F /* TriMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriMesh.h; sourceTree = "<group>"; };
+		A1EF089618789B03000E3A9F /* license.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		A1EF089718789B03000E3A9F /* manual.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = manual.html; sourceTree = "<group>"; };
+		A1EF089818789B03000E3A9F /* rapidxml.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rapidxml.hpp; sourceTree = "<group>"; };
+		A1EF089918789B03000E3A9F /* rapidxml_iterators.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rapidxml_iterators.hpp; sourceTree = "<group>"; };
+		A1EF089A18789B03000E3A9F /* rapidxml_print.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rapidxml_print.hpp; sourceTree = "<group>"; };
+		A1EF089B18789B03000E3A9F /* rapidxml_utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rapidxml_utils.hpp; sourceTree = "<group>"; };
+		A1EF089C1878AA79000E3A9F /* Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle.cpp; sourceTree = "<group>"; };
+		A1EF089D1878AA79000E3A9F /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +312,7 @@
 		A19D7EA31859700F0009D962 = {
 			isa = PBXGroup;
 			children = (
+				A1EF089518789B03000E3A9F /* rapidxml-1.13 */,
 				A19D7EB8185970190009D962 /* glm */,
 				A19D7EAE1859700F0009D962 /* SimpleRayTracer */,
 				A19D7EAD1859700F0009D962 /* Products */,
@@ -604,6 +617,10 @@
 				A19D7F9F185A9D6A0009D962 /* Traceable.cpp */,
 				A19D7FA0185A9D6A0009D962 /* Traceable.h */,
 				A19D7FB1185CF73E0009D962 /* Implicit Objects */,
+				A1EF08921878777D000E3A9F /* TriMesh.cpp */,
+				A1EF08931878777D000E3A9F /* TriMesh.h */,
+				A1EF089C1878AA79000E3A9F /* Triangle.cpp */,
+				A1EF089D1878AA79000E3A9F /* Triangle.h */,
 			);
 			name = Traceables;
 			sourceTree = "<group>";
@@ -639,6 +656,19 @@
 				A19D7FB81860955A0009D962 /* Light.h */,
 			);
 			name = Lights;
+			sourceTree = "<group>";
+		};
+		A1EF089518789B03000E3A9F /* rapidxml-1.13 */ = {
+			isa = PBXGroup;
+			children = (
+				A1EF089618789B03000E3A9F /* license.txt */,
+				A1EF089718789B03000E3A9F /* manual.html */,
+				A1EF089818789B03000E3A9F /* rapidxml.hpp */,
+				A1EF089918789B03000E3A9F /* rapidxml_iterators.hpp */,
+				A1EF089A18789B03000E3A9F /* rapidxml_print.hpp */,
+				A1EF089B18789B03000E3A9F /* rapidxml_utils.hpp */,
+			);
+			path = "rapidxml-1.13";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -698,6 +728,8 @@
 				A19D7EB01859700F0009D962 /* main.cpp in Sources */,
 				A19D7FBF18613ED60009D962 /* Camera.cpp in Sources */,
 				A19D7FB0185CF7390009D962 /* Cube.cpp in Sources */,
+				A1EF08941878777D000E3A9F /* TriMesh.cpp in Sources */,
+				A1EF089E1878AA79000E3A9F /* Triangle.cpp in Sources */,
 				A19D7FA1185A9D6A0009D962 /* Traceable.cpp in Sources */,
 				A19D7FAA185AB0630009D962 /* Sphere.cpp in Sources */,
 				A19D7FBC18613D950009D962 /* Scene.cpp in Sources */,

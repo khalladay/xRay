@@ -16,6 +16,9 @@ class RaycastHit
 {
 public:
     float t;
+    float u;
+    float v;
+    
     int objectId;
     
     vec3 contactNormal;

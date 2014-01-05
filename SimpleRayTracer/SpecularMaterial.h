@@ -27,7 +27,7 @@ public:
         vec3 diffuseTerm = col * max(0.0f, dot(lightDirection, normal));
         vec3 r =-normalize(reflect (viewDirection, normal));
         vec3 specTerm = specCol * pow(max(0.0f, dot(r, lightDirection)), 80.0f);
-        return diffuseTerm+specTerm;
+        return diffuseTerm+specTerm+col*vec3(0.05f);
     }
     
 };
