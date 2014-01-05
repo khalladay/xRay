@@ -18,8 +18,8 @@
 #include "SpecularMaterial.h"
 #include "TriMesh.h"
 
-#define NUM_BOUNCES 4
-#define ANTI_ALIAS 3
+#define NUM_BOUNCES 0
+#define ANTI_ALIAS 2
 using namespace glm;
 
 float cube(vec3 point, vec3 box, vec3 boxPos)
