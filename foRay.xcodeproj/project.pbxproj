@@ -36,7 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A19D7EAC1859700F0009D962 /* Clusterwink */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Clusterwink; sourceTree = BUILT_PRODUCTS_DIR; };
+		A19D7EAC1859700F0009D962 /* foRay */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = foRay; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19D7EAF1859700F0009D962 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A19D7EB11859700F0009D962 /* SimpleRayTracer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SimpleRayTracer.1; sourceTree = "<group>"; };
 		A19D7EB9185970190009D962 /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 		A19D7EAD1859700F0009D962 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A19D7EAC1859700F0009D962 /* Clusterwink */,
+				A19D7EAC1859700F0009D962 /* foRay */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -674,9 +674,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A19D7EAB1859700F0009D962 /* Clusterwink */ = {
+		A19D7EAB1859700F0009D962 /* foRay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A19D7EB51859700F0009D962 /* Build configuration list for PBXNativeTarget "Clusterwink" */;
+			buildConfigurationList = A19D7EB51859700F0009D962 /* Build configuration list for PBXNativeTarget "foRay" */;
 			buildPhases = (
 				A19D7EA81859700F0009D962 /* Sources */,
 				A19D7EA91859700F0009D962 /* Frameworks */,
@@ -686,9 +686,9 @@
 			);
 			dependencies = (
 			);
-			name = Clusterwink;
+			name = foRay;
 			productName = SimpleRayTracer;
-			productReference = A19D7EAC1859700F0009D962 /* Clusterwink */;
+			productReference = A19D7EAC1859700F0009D962 /* foRay */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -700,7 +700,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Kyle Halladay";
 			};
-			buildConfigurationList = A19D7EA71859700F0009D962 /* Build configuration list for PBXProject "Clusterwink" */;
+			buildConfigurationList = A19D7EA71859700F0009D962 /* Build configuration list for PBXProject "foRay" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -712,7 +712,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A19D7EAB1859700F0009D962 /* Clusterwink */,
+				A19D7EAB1859700F0009D962 /* foRay */,
 			);
 		};
 /* End PBXProject section */
@@ -811,21 +811,21 @@
 		A19D7EB61859700F0009D962 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = Clusterwink;
+				PRODUCT_NAME = foRay;
 			};
 			name = Debug;
 		};
 		A19D7EB71859700F0009D962 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = Clusterwink;
+				PRODUCT_NAME = foRay;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A19D7EA71859700F0009D962 /* Build configuration list for PBXProject "Clusterwink" */ = {
+		A19D7EA71859700F0009D962 /* Build configuration list for PBXProject "foRay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A19D7EB31859700F0009D962 /* Debug */,
@@ -834,7 +834,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A19D7EB51859700F0009D962 /* Build configuration list for PBXNativeTarget "Clusterwink" */ = {
+		A19D7EB51859700F0009D962 /* Build configuration list for PBXNativeTarget "foRay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A19D7EB61859700F0009D962 /* Debug */,

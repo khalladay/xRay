@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A19D7EAB1859700F0009D962"
                BuildableName = "Clusterwink"
-               BlueprintName = "Clusterwink"
-               ReferencedContainer = "container:Clusterwink.xcodeproj">
+               BlueprintName = "foRay"
+               ReferencedContainer = "container:foRay.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A19D7EAB1859700F0009D962"
             BuildableName = "Clusterwink"
-            BlueprintName = "Clusterwink"
-            ReferencedContainer = "container:Clusterwink.xcodeproj">
+            BlueprintName = "foRay"
+            ReferencedContainer = "container:foRay.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A19D7EAB1859700F0009D962"
             BuildableName = "Clusterwink"
-            BlueprintName = "Clusterwink"
-            ReferencedContainer = "container:Clusterwink.xcodeproj">
+            BlueprintName = "foRay"
+            ReferencedContainer = "container:foRay.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A19D7EAB1859700F0009D962"
             BuildableName = "Clusterwink"
-            BlueprintName = "Clusterwink"
-            ReferencedContainer = "container:Clusterwink.xcodeproj">
+            BlueprintName = "foRay"
+            ReferencedContainer = "container:foRay.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
