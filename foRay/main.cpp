@@ -17,6 +17,7 @@
 #include "CheckerMaterial.h"
 #include "SpecularMaterial.h"
 #include "TriMesh.h"
+#include "colladaparse.hpp"
 
 #define NUM_BOUNCES 0
 #define ANTI_ALIAS 2
@@ -119,6 +120,8 @@ void trace(Ray* r, RaycastHit* hit, vec3* col, float uvy, Scene* scn, int bounce
 int main(int argc, const char * argv[])
 {
     vec3 image[512][512];
+    std::shared_ptr<clp::tri3> triArray = clp::getRawTriangles("/Users/kylehalladay/Documents/Development/Mac OS X/foRay/res/cube.dae", "Cube");
+
     
     Scene scene(vec3(-18.0f, 7.5f, -11.0f), vec3(0.0f, 4.0f, 0.0f), vec3(0.0f, -1.0f, 0.0f));
     TriMesh* mesh2 = new TriMesh(new SpecularMaterial(vec3(1.0,1.0,1.0), vec3(0.0,0.0,1.0f)));
@@ -138,10 +141,8 @@ int main(int argc, const char * argv[])
     mesh->AddTriangle(vec3(0.0f, 9.0f, 0.0f), vec3(-2.0f, 3.0f, 3.0f), vec3(2.0f, 3.0f, 3.0f));
 
     scene.traceables.push_back(mesh);
-   // scene.traceables.push_back(mesh2);
 
     scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, -10.0f), 4.0f, 1,new SpecularMaterial(vec3(1.0f, 1.0f, 0.0f), vec3(1.0f))));
-    //scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, 0.0f), 2.0f, 1,new SpecularMaterial(vec3(0.0f, 1.0f, 1.0f), vec3(1.0f))));
     scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, 10.0f), 4.0f, 1, new SpecularMaterial(vec3(1.0f, 0.0f, 1.0f), vec3(1.0f))));
     scene.traceables.push_back(new Plane(vec3(0.0, 0.0, 0.0), normalize(vec3(0.0, -1.0,0.0)), new CheckerMaterial()));
 

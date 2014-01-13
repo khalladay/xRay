@@ -35,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		A19D7EAC1859700F0009D962 /* foRay */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = foRay; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1CD42A218840DAB00D93352 /* colladaparse.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = colladaparse.hpp; sourceTree = "<group>"; };
 		A1EF08A01879DB1B000E3A9F /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		A1EF08A11879DB1B000E3A9F /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		A1EF08A21879DB1B000E3A9F /* CheckerMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckerMaterial.h; sourceTree = "<group>"; };
@@ -325,9 +326,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A1CD42A318840DB800D93352 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD42A218840DAB00D93352 /* colladaparse.hpp */,
+			);
+			name = IO;
+			sourceTree = "<group>";
+		};
 		A1EF089F1879DB1B000E3A9F /* foRay */ = {
 			isa = PBXGroup;
 			children = (
+				A1CD42A318840DB800D93352 /* IO */,
 				A1EF09CE1879DCCA000E3A9F /* Containers */,
 				A1EF09CD1879DCA8000E3A9F /* Lights */,
 				A1EF09CC1879DC91000E3A9F /* Core */,
