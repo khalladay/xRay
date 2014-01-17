@@ -11,13 +11,9 @@
 #include <fstream>
 #include "Ray.h"
 #include "RaycastHit.h"
-#include "Sphere.h"
-#include "Plane.h"
 #include "Scene.h"
-#include "CheckerMaterial.h"
-#include "SpecularMaterial.h"
-#include "TriMesh.h"
-#include "colladaparse.hpp"
+#include "ColladaSceneBuilder.h"
+#include "SceneDirector.h"
 
 #define NUM_BOUNCES 0
 #define ANTI_ALIAS 2
@@ -119,34 +115,17 @@ void trace(Ray* r, RaycastHit* hit, vec3* col, float uvy, Scene* scn, int bounce
 
 int main(int argc, const char * argv[])
 {
+    /* arguments:
+     * input path: path to the input scene file
+     * output path: directory */
+    if (argc == 0 || argc > 2)
+    {
+        printf("Incorrect ");
+    }
     vec3 image[512][512];
-    std::shared_ptr<clp::tri3> triArray = clp::getRawTriangles("/Users/kylehalladay/Documents/Development/Mac OS X/foRay/res/cube.dae", "Cube");
 
-    
-    Scene scene(vec3(-18.0f, 7.5f, -11.0f), vec3(0.0f, 4.0f, 0.0f), vec3(0.0f, -1.0f, 0.0f));
-    TriMesh* mesh2 = new TriMesh(new SpecularMaterial(vec3(1.0,1.0,1.0), vec3(0.0,0.0,1.0f)));
-    mesh2->AddTriangle(vec3(-14.0f, 0.0f, 25.0f), vec3(-14.0f, 38.0f, 15.0f), vec3(14.0f, 38.0f, 15.0f));
-    mesh2->AddTriangle(vec3(-14.0f, 0.0f, 25.0f), vec3(14.0f, 38.0f, 15.0f), vec3(14.0f, 0.0f, 25.0f));
-
-    TriMesh* mesh =  new TriMesh(new SpecularMaterial(vec3(1.0,0.0,0.0), vec3(1.0f)));
-    mesh->AddTriangle(vec3(0.0f, 0.0f, 0.0f), vec3(-2.0f, 3.0f, -3.0f), vec3(2.0f, 3.0f, -3.0f));
-    mesh->AddTriangle(vec3(0.0f, 0.0f, 0.0f), vec3(-2.0f, 3.0f, 3.0f),vec3(-2.0f, 3.0f, -3.0f));
-    mesh->AddTriangle(vec3(0.0f, 0.0f, 0.0f),vec3(2.0f, 3.0f, -3.0f), vec3(2.0f, 3.0f, 3.0f));
-    mesh->AddTriangle(vec3(0.0f, 0.0f, 0.0f),vec3(2.0f, 3.0f, 3.0f),vec3(-2.0f, 3.0f, 3.0f));
-
-    
-    mesh->AddTriangle(vec3(2.0f, 3.0f, -3.0f), vec3(-2.0f, 3.0f, -3.0f),vec3(0.0f, 9.0f, 0.0f));
-    mesh->AddTriangle(vec3(0.0f, 9.0f, 0.0f), vec3(-2.0f, 3.0f, -3.0f), vec3(-2.0f, 3.0f, 3.0f));
-    mesh->AddTriangle(vec3(0.0f, 9.0f, 0.0f), vec3(2.0f, 3.0f, 3.0f), vec3(2.0f, 3.0f, -3.0f));
-    mesh->AddTriangle(vec3(0.0f, 9.0f, 0.0f), vec3(-2.0f, 3.0f, 3.0f), vec3(2.0f, 3.0f, 3.0f));
-
-    scene.traceables.push_back(mesh);
-
-    scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, -10.0f), 4.0f, 1,new SpecularMaterial(vec3(1.0f, 1.0f, 0.0f), vec3(1.0f))));
-    scene.traceables.push_back(new Sphere(vec3(0.0f, 4.0f, 10.0f), 4.0f, 1, new SpecularMaterial(vec3(1.0f, 0.0f, 1.0f), vec3(1.0f))));
-    scene.traceables.push_back(new Plane(vec3(0.0, 0.0, 0.0), normalize(vec3(0.0, -1.0,0.0)), new CheckerMaterial()));
-
-    
+    std::shared_ptr<Scene> scene = SceneDirector::buildScene(new ColladaSceneBuilder("/Users/kylehalladay/Documents/Development/Mac OS X/foRay/res/scene1.dae"));
+    /*
     for (int y = 0; y < 512; y++)
     {
         for (int x = 0; x < 512; x++)
@@ -180,8 +159,9 @@ int main(int argc, const char * argv[])
             image[x][y] =col;
         }
     }
+     */
     
-    writeArrayToFile(image);
+    //writeArrayToFile(image);
     
     return 0;
 }

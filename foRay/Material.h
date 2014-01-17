@@ -12,6 +12,18 @@
 #include "glm.hpp"
 
 using namespace glm;
+
+typedef struct
+{
+    vec3 emission;
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+    float indexOfRefraction;
+    float shininess;
+    
+}MaterialProperties;
+
 class Material
 {
 public:

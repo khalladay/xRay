@@ -13,6 +13,7 @@
 #include "Traceable.h"
 #include "Triangle.h"
 #include "Material.h"
+#include <string>
 #include <vector>
 
 using namespace glm;
@@ -27,9 +28,10 @@ public:
         material = m;
     }
     
-    void AddTriangle(vec3 a, vec3 b, vec3 c)
+    TriMesh(){}
+    
+    void AddTriangle(Triangle t)
     {
-        Triangle t(a,b,c, material);
         triangles.push_back(t);
     }
     
@@ -52,10 +54,8 @@ public:
                     hitFlag = true;
 
                 }
-                
             }
         }
-        
        
         return hitFlag;
     }

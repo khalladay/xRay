@@ -18,13 +18,22 @@ public:
     vec3 A;
     vec3 B;
     vec3 C;
-   
+    
+    vec3 na;
+    vec3 nb;
+    vec3 nc;
+    
+    vec3 N;
+    
     bool intersect(Ray* r, RaycastHit* hit);
-
-    Triangle(vec3 a, vec3 b, vec3 c, Material* m) : A(a), B(b), C(c)
+    
+    Triangle(vec3 a, vec3 b, vec3 c, vec3 n, Material* m ) : A(a), B(b), C(c), N(n)
     {
         material = m;
     }
+    
+    Triangle(){}
+    
 };
 
 #endif /* defined(__Clusterwink__Triangle__) */

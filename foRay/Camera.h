@@ -18,6 +18,12 @@ public:
     vec3 position;
     vec3 lookPoint;
     vec3 up;
+    
+    float fov;
+    float aspectRatio;
+    float zNear;
+    float zFar;
+    mat4 transform;
 };
 
 #endif /* defined(__Clusterwink__Camera__) */

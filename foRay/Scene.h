@@ -10,6 +10,7 @@
 #define __Clusterwink__Scene__
 
 #include "Traceable.h"
+#include "Light.h"
 #include "Camera.h"
 
 #include <vector>
@@ -18,8 +19,13 @@ class Scene
 {
     
 public:
-    std::vector<Traceable*> traceables;
+    
+    //todo - change other code to use smart pointers
+    std::vector<std::shared_ptr<Traceable>> traceables;
+    std::vector<std::shared_ptr<Light>> lights;
     Camera cam;
+    
+    Scene(){}
     
     Scene(vec3 camPos, vec3 camLookpoint, vec3 camUp)
     {
@@ -27,6 +33,7 @@ public:
         cam.lookPoint = camLookpoint;
         cam.up = camUp;
     }
+
     
 };
 #endif /* defined(__Clusterwink__Scene__) */

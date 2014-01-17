@@ -52,7 +52,8 @@ bool Triangle::intersect(Ray *r, RaycastHit* hit)
     }
     
     hit->t = t;
-    hit->contactNormal = normalize(cross(AB, AC));
+    
+    hit->contactNormal = N;
     
     return true;
 
