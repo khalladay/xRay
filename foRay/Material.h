@@ -15,10 +15,10 @@ using namespace glm;
 
 typedef struct
 {
-    vec3 emission;
-    vec3 ambient;
-    vec3 diffuse;
-    vec3 specular;
+    vec4 emission;
+    vec4 ambient;
+    vec4 diffuse;
+    vec4 specular;
     float indexOfRefraction;
     float shininess;
     
@@ -30,7 +30,7 @@ public:
     
     vec3 col;
     
-    Material()
+    Material(MaterialProperties properties)
     {
         col = vec3(1.0f);
     }
@@ -39,7 +39,10 @@ public:
     {
     }
     
-    virtual vec3 sample(const vec3& samplePoint, const vec3& normal, const vec3& lightDirection, const vec3& lightPosition, const vec3& viewDirection) = 0;
+    virtual vec3 sample(const vec3& samplePoint, const vec3& normal, const vec3& lightDirection, const vec3& lightPosition, const vec3& viewDirection)
+    {
+        return vec3(1.0f);
+    }
 };
 
 #endif /* defined(__Clusterwink__Material__) */

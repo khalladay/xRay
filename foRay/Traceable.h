@@ -13,26 +13,23 @@
 #include "Ray.h"
 #include "glm.hpp"
 #include "Material.h"
-#include "DiffuseMaterial.h"
 
 using namespace glm;
+
 class Traceable
 {
 public:
     int objectId;
-    mat4 worldToObject;
-    mat4 objectToWorld;
+    mat4 transform;
     
     Material *material;
     
     Traceable()
     {
-        material = new DiffuseMaterial(vec3(1.0f));
     }
     
     Traceable(mat4 transformMatrix, Material* mat, int id) : material(mat)
     {
-        objectToWorld = inverse(transformMatrix);
     }
     
     virtual bool intersect(Ray* r, RaycastHit* hit) = 0;

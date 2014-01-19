@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A1CD42B61885791C00D93352 /* ColladaSceneBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1CD42B41885791C00D93352 /* ColladaSceneBuilder.cpp */; };
-		A1CD42B91887707700D93352 /* PhongMaterial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1CD42B71887707700D93352 /* PhongMaterial.cpp */; };
-		A1CD42BC1887724700D93352 /* LambertMaterial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1CD42BA1887724700D93352 /* LambertMaterial.cpp */; };
 		A1CD42BF18880CE800D93352 /* DirectionalLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1CD42BD18880CE800D93352 /* DirectionalLight.cpp */; };
 		A1CD42C51888DCE000D93352 /* PointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1CD42C31888DCE000D93352 /* PointLight.cpp */; };
 		A1EF09BE1879DBC8000E3A9F /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08A01879DB1B000E3A9F /* Camera.cpp */; };
@@ -44,9 +42,7 @@
 		A1CD42B21885791100D93352 /* SceneBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneBuilder.h; sourceTree = "<group>"; };
 		A1CD42B41885791C00D93352 /* ColladaSceneBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ColladaSceneBuilder.cpp; sourceTree = "<group>"; };
 		A1CD42B51885791C00D93352 /* ColladaSceneBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColladaSceneBuilder.h; sourceTree = "<group>"; };
-		A1CD42B71887707700D93352 /* PhongMaterial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhongMaterial.cpp; sourceTree = "<group>"; };
 		A1CD42B81887707700D93352 /* PhongMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhongMaterial.h; sourceTree = "<group>"; };
-		A1CD42BA1887724700D93352 /* LambertMaterial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LambertMaterial.cpp; sourceTree = "<group>"; };
 		A1CD42BB1887724700D93352 /* LambertMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LambertMaterial.h; sourceTree = "<group>"; };
 		A1CD42BD18880CE800D93352 /* DirectionalLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectionalLight.cpp; sourceTree = "<group>"; };
 		A1CD42BE18880CE800D93352 /* DirectionalLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionalLight.h; sourceTree = "<group>"; };
@@ -59,7 +55,6 @@
 		A1EF08A21879DB1B000E3A9F /* CheckerMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckerMaterial.h; sourceTree = "<group>"; };
 		A1EF08A31879DB1B000E3A9F /* Cube.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
 		A1EF08A41879DB1B000E3A9F /* Cube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
-		A1EF08A51879DB1B000E3A9F /* DiffuseMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiffuseMaterial.h; sourceTree = "<group>"; };
 		A1EF08A61879DB1B000E3A9F /* Light.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
 		A1EF08A71879DB1B000E3A9F /* Light.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
 		A1EF08A81879DB1B000E3A9F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -73,7 +68,6 @@
 		A1EF08B01879DB1B000E3A9F /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		A1EF08B11879DB1B000E3A9F /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		A1EF08B21879DB1B000E3A9F /* SimpleRayTracer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SimpleRayTracer.1; sourceTree = "<group>"; };
-		A1EF08B31879DB1B000E3A9F /* SpecularMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecularMaterial.h; sourceTree = "<group>"; };
 		A1EF08B41879DB1B000E3A9F /* Sphere.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = "<group>"; };
 		A1EF08B51879DB1B000E3A9F /* Sphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
 		A1EF08B61879DB1B000E3A9F /* Traceable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Traceable.cpp; sourceTree = "<group>"; };
@@ -358,6 +352,7 @@
 		A1EF089F1879DB1B000E3A9F /* foRay */ = {
 			isa = PBXGroup;
 			children = (
+				A1EF08A81879DB1B000E3A9F /* main.cpp */,
 				A1EF09CE1879DCCA000E3A9F /* Containers */,
 				A1EF09CD1879DCA8000E3A9F /* Lights */,
 				A1EF09CC1879DC91000E3A9F /* Core */,
@@ -668,12 +663,8 @@
 			isa = PBXGroup;
 			children = (
 				A1EF08A91879DB1B000E3A9F /* Material.h */,
-				A1EF08B31879DB1B000E3A9F /* SpecularMaterial.h */,
-				A1EF08A51879DB1B000E3A9F /* DiffuseMaterial.h */,
 				A1EF08A21879DB1B000E3A9F /* CheckerMaterial.h */,
-				A1CD42B71887707700D93352 /* PhongMaterial.cpp */,
 				A1CD42B81887707700D93352 /* PhongMaterial.h */,
-				A1CD42BA1887724700D93352 /* LambertMaterial.cpp */,
 				A1CD42BB1887724700D93352 /* LambertMaterial.h */,
 				A1CD42C7188967B800D93352 /* MaterialFactory.h */,
 			);
@@ -692,7 +683,6 @@
 				A1EF08AF1879DB1B000E3A9F /* RaycastHit.h */,
 				A1EF08B01879DB1B000E3A9F /* Scene.cpp */,
 				A1EF08B11879DB1B000E3A9F /* Scene.h */,
-				A1EF08A81879DB1B000E3A9F /* main.cpp */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -774,8 +764,6 @@
 				A1EF09BE1879DBC8000E3A9F /* Camera.cpp in Sources */,
 				A1EF09BF1879DBCA000E3A9F /* Cube.cpp in Sources */,
 				A1EF09C01879DBCC000E3A9F /* Light.cpp in Sources */,
-				A1CD42B91887707700D93352 /* PhongMaterial.cpp in Sources */,
-				A1CD42BC1887724700D93352 /* LambertMaterial.cpp in Sources */,
 				A1EF09C31879DBD2000E3A9F /* Ray.cpp in Sources */,
 				A1EF09C21879DBD0000E3A9F /* Plane.cpp in Sources */,
 				A1EF09C11879DBCF000E3A9F /* main.cpp in Sources */,

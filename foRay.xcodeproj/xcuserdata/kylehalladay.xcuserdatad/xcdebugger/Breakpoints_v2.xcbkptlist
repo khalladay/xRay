@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411656757.751229"
+            timestampString = "411660702.693127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "ColladaSceneBuilder::buildCamera()"
             landmarkType = "5">
          </BreakpointContent>
@@ -64,11 +64,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -80,11 +80,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -96,11 +96,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -112,11 +112,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
             <Locations>
@@ -158,11 +158,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -174,11 +174,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863897.858247"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -190,11 +190,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411867950.156539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
             <Locations>
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411867950.156539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
             <Locations>
@@ -279,12 +279,12 @@
                   symbolName = "ColladaSceneBuilder::buildMeshes()"
                   moduleName = "foRay"
                   urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
-                  timestampString = "411567383.750526"
+                  timestampString = "411864208.577754"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "150"
-                  endingLineNumber = "150"
-                  offsetFromSymbolStart = "5969">
+                  startingLineNumber = "246"
+                  endingLineNumber = "246"
+                  offsetFromSymbolStart = "6286">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -293,12 +293,12 @@
                   symbolName = "ColladaSceneBuilder::buildMeshes()"
                   moduleName = "foRay"
                   urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
-                  timestampString = "411567383.75071"
+                  timestampString = "411864208.577977"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "150"
-                  endingLineNumber = "150"
-                  offsetFromSymbolStart = "6042">
+                  startingLineNumber = "246"
+                  endingLineNumber = "246"
+                  offsetFromSymbolStart = "6359">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -307,12 +307,12 @@
                   symbolName = "ColladaSceneBuilder::buildMeshes()"
                   moduleName = "foRay"
                   urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
-                  timestampString = "411567383.750973"
+                  timestampString = "411864208.578179"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "150"
-                  endingLineNumber = "150"
-                  offsetFromSymbolStart = "6109">
+                  startingLineNumber = "246"
+                  endingLineNumber = "246"
+                  offsetFromSymbolStart = "6426">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -321,12 +321,12 @@
                   symbolName = "ColladaSceneBuilder::buildMeshes()"
                   moduleName = "foRay"
                   urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
-                  timestampString = "411567383.751292"
+                  timestampString = "411864208.578391"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "150"
-                  endingLineNumber = "150"
-                  offsetFromSymbolStart = "6169">
+                  startingLineNumber = "246"
+                  endingLineNumber = "246"
+                  offsetFromSymbolStart = "6486">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -338,57 +338,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "ColladaSceneBuilder::buildMeshes()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ColladaSceneBuilder::buildMeshes()"
-                  moduleName = "foRay"
-                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
-                  timestampString = "411567383.751511"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "152"
-                  endingLineNumber = "152"
-                  offsetFromSymbolStart = "6245">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ColladaSceneBuilder::buildMeshes()"
-                  moduleName = "foRay"
-                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
-                  timestampString = "411567383.751697"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "152"
-                  endingLineNumber = "152"
-                  offsetFromSymbolStart = "6316">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
             <Locations>
@@ -430,11 +384,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -446,11 +400,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -462,11 +416,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -478,11 +432,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "ColladaSceneBuilder::buildLights()"
             landmarkType = "5">
             <Locations>
@@ -524,73 +478,73 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "ColladaSceneBuilder::buildLights()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "ColladaSceneBuilder::buildLights()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
             endingLineNumber = "119"
             landmarkName = "ColladaSceneBuilder::buildLights()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411863119.491054"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "ColladaSceneBuilder::buildLights()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411863119.491054"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "ColladaSceneBuilder::buildLights()"
+            landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ColladaSceneBuilder::buildLights()"
                   moduleName = "foRay"
                   urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
-                  timestampString = "411657031.67764"
+                  timestampString = "411855040.198599"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "116"
-                  endingLineNumber = "116"
-                  offsetFromSymbolStart = "4704">
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "4740">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ColladaSceneBuilder::buildLights()"
                   moduleName = "foRay"
                   urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
-                  timestampString = "411657031.67785"
+                  timestampString = "411855040.198812"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "116"
-                  endingLineNumber = "116"
-                  offsetFromSymbolStart = "5825">
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "5861">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -598,15 +552,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411657591.666044"
+            timestampString = "411863119.491054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "ColladaSceneBuilder::buildLights()"
             landmarkType = "5">
          </BreakpointContent>
@@ -614,17 +568,483 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/LightFactory.h"
-            timestampString = "411657088.48002"
+            timestampString = "411660702.693127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "build(std::map&lt;std::string,std::string&gt; plist)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411867950.156539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "ColladaSceneBuilder::buildMeshes()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411867950.156539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
+            landmarkName = "ColladaSceneBuilder::buildMeshes()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411855936.273812"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "8419">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411855936.274"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "8618">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411867950.156539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "ColladaSceneBuilder::buildMeshes()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411867950.156539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
+            landmarkName = "ColladaSceneBuilder::buildMeshes()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/main.cpp"
+            timestampString = "411862986.693129"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "main(int argc, const char * argv[])"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/MaterialFactory.h"
+            timestampString = "411861986.822144"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "parsePropertyPlist(std::map&lt;std::string, std::string&gt; plist)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411863119.491054"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "ColladaSceneBuilder::buildMaterials()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411863119.491054"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "ColladaSceneBuilder::buildMaterials()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMaterials()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411862136.160963"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "1041">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMaterials()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411862136.161189"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "1233">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMaterials()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411862136.161423"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "2415">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411863949.521708"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "ColladaSceneBuilder::buildMeshes()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411863949.919607"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "ColladaSceneBuilder::buildMeshes()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411867950.156539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "ColladaSceneBuilder::buildMeshes()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.852081"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "253"
+                  endingLineNumber = "253"
+                  offsetFromSymbolStart = "7861">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.852271"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "253"
+                  endingLineNumber = "253"
+                  offsetFromSymbolStart = "7946">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.852455"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "253"
+                  endingLineNumber = "253"
+                  offsetFromSymbolStart = "8008">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.852638"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "253"
+                  endingLineNumber = "253"
+                  offsetFromSymbolStart = "8079">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.852825"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "253"
+                  endingLineNumber = "253"
+                  offsetFromSymbolStart = "8141">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.853011"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "253"
+                  endingLineNumber = "253"
+                  offsetFromSymbolStart = "8212">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.853194"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "253"
+                  endingLineNumber = "253"
+                  offsetFromSymbolStart = "8267">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/ColladaSceneBuilder.cpp"
+            timestampString = "411867950.156539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "ColladaSceneBuilder::buildMeshes()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.853404"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "254"
+                  endingLineNumber = "254"
+                  offsetFromSymbolStart = "8350">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.853588"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "254"
+                  endingLineNumber = "254"
+                  offsetFromSymbolStart = "8435">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.853777"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "254"
+                  endingLineNumber = "254"
+                  offsetFromSymbolStart = "8497">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.853971"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "254"
+                  endingLineNumber = "254"
+                  offsetFromSymbolStart = "8568">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.854235"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "254"
+                  endingLineNumber = "254"
+                  offsetFromSymbolStart = "8630">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.854422"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "254"
+                  endingLineNumber = "254"
+                  offsetFromSymbolStart = "8701">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColladaSceneBuilder::buildMeshes()"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/ColladaSceneBuilder.cpp"
+                  timestampString = "411867098.854609"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "254"
+                  endingLineNumber = "254"
+                  offsetFromSymbolStart = "8756">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -268,7 +268,11 @@
         </instance_geometry>
       </node>
       <node id="Plane" name="Plane" type="NODE">
-        <matrix sid="transform">8.005711 0 0 0 0 8.005711 0 0 0 0 8.005711 0 0 0 0 1</matrix>
+        <matrix sid="transform">
+		8.005711 0  0	 0 
+		0 8.005711 	0	 0 
+		0 0 	8.005711 0 
+		0 0 		0 	 1</matrix>
         <instance_geometry url="#Plane-mesh"/>
       </node>
       <node id="Icosphere" name="Icosphere" type="NODE">

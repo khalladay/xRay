@@ -33,6 +33,8 @@ public:
         cam.lookPoint = camLookpoint;
         cam.up = camUp;
     }
+    
+    void printScene();
 
     
 };

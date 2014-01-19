@@ -26,7 +26,7 @@ typedef struct
 class Light
 {
 public:
-    Light(LightProperties properties){}
+    Light(LightProperties properties);
     
     vec3 getDirection();
     vec3 getPosition();

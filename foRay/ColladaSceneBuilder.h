@@ -25,10 +25,11 @@ class ColladaSceneBuilder : public SceneBuilder
 {
 public:
     
-    
     std::string fileContents;
     char* chContents;
     xml_document<> doc;
+    
+    std::map<std::string, std::shared_ptr<Material>> materials;
     
     ColladaSceneBuilder(std::string filepath)
     {

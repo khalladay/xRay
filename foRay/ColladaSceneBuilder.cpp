@@ -10,6 +10,7 @@
 #include "Camera.h"
 #include "TriMesh.h"
 #include "LightFactory.h"
+#include "MaterialFactory.h"
 
 void ColladaSceneBuilder::buildCamera()
 {
@@ -18,7 +19,7 @@ void ColladaSceneBuilder::buildCamera()
     
     if( camNodesRoot == NULL)
     {
-        fprintf(stderr, "ERROR: No cameras found in collada file. %s : %d!",__FILE__, __LINE__);
+        fprintf(stderr, "No cameras found in collada file\n");
         return;
     }
  
@@ -83,6 +84,13 @@ void ColladaSceneBuilder::buildLights()
 {
     xml_node<>* root = doc.first_node("COLLADA");
     xml_node<>* camNodesRoot = getChild(root, "library_lights");
+    
+    if (camNodesRoot == NULL)
+    {
+        fprintf(stdout, "No lights found in collada file\n");
+        return;
+    }
+    
     xml_node<>* lightIter = camNodesRoot->first_node("light");
     
     int count = 0;
@@ -133,11 +141,33 @@ void ColladaSceneBuilder::buildMaterials()
     xml_node<>* materialsRoot = getChild(root, "library_effects");
     xml_node<>* effectIter = materialsRoot->first_node("effect");
     
+    int count = 0;
     while(effectIter != NULL)
     {
-    
+        count++;
+        char* effectName = effectIter->first_attribute("id")->value();
+        std::map<std::string, std::string> materialProperties;
+        
+        xml_node<>* profile = effectIter->first_node("profile_COMMON");
+        xml_node<>* technique = profile->first_node("technique");
+        xml_node<>* materialType = technique->first_node();
+        
+        materialProperties["type"] = materialType->name();
+        
+        xml_node<>* propertyIter = materialType->first_node();
+        
+        while(propertyIter != NULL)
+        {
+            materialProperties[std::string(propertyIter->name())] = std::string(propertyIter->first_node()->value());
+            
+            propertyIter = propertyIter->next_sibling();
+        }
+        
+        materials["effectName"] = MaterialFactory::build(materialProperties);
+        
+        effectIter = effectIter->next_sibling();
     }
-    
+    fprintf(stdout, "Success: Built %i materials from collada file\n", count);
     
 }
 
@@ -162,7 +192,7 @@ void ColladaSceneBuilder::buildMeshes()
         xml_node<>* meshRoot = geometryIter->first_node("mesh");
         
         char* meshName = geometryIter->first_attribute("id")->value();
-      
+
         //read in vert positions
         std::string meshAttribName = std::string(meshName)+"-positions";
         xml_node<>* meshPositionSource = getChild(meshRoot, "source", "id", meshAttribName);
@@ -207,30 +237,54 @@ void ColladaSceneBuilder::buildMeshes()
         for (int tri = 0; tri < numTris; tri++)
         {
             Triangle t;
-           
-            int vertIndex = indices[tri*6];
-            int normalIndex = indices[tri*6 + 1];
+            t.A = vec3( positions[indices[tri*6]],      positions[indices[tri*6] + 1],    positions[indices[tri*6] + 2 ]);
+            t.na = vec3(normals  [indices[tri*6 + 1]],  normals[indices[tri*6 + 1] + 1],  normals[indices[tri*6 + 1] + 2]);
             
-            t.A = vec3(positions[vertIndex], positions[vertIndex+1], positions[vertIndex+2]);
-            t.na = vec3(normals[normalIndex],normals[normalIndex+1],normals[normalIndex+2]);
+            t.B = vec3( positions[indices[tri*6 +2 ]],  positions[indices[tri*6 + 2] +1], positions[indices[tri*6 + 2]+2]);
+            t.nb = vec3(normals[indices[tri*6+3]],      normals[indices[tri*6 + 3]+1],    normals[indices[tri*6 +3]+2]);
             
-            vertIndex = indices[tri*6 + 2];
-            normalIndex = indices[tri*6 + 3];
-            
-            t.B = vec3(positions[vertIndex], positions[vertIndex+1], positions[vertIndex+2]);
-            t.nb = vec3(normals[normalIndex],normals[normalIndex+1],normals[normalIndex+2]);
-            
-            vertIndex = indices[tri*6 + 4];
-            normalIndex = indices[tri*6 + 5];
-            
-            t.C = vec3(positions[vertIndex], positions[vertIndex+1], positions[vertIndex+2]);
-            t.nc = vec3(normals[normalIndex],normals[normalIndex+1],normals[normalIndex+2]);
-            
+            t.C = vec3( positions[indices[tri*6 + 4]],  positions[indices[tri*6 + 4]+1],  positions[indices[tri*6 + 4]+2]);
+            t.nc = vec3(normals[indices[tri*6 + 5]],    normals[indices[tri*6 + 5]+1],    normals[indices[tri*6 + 5]+2]);
+        
             mesh->AddTriangle(t);
+        }
+        
+        xml_node<>* visualSceneRoot = root->first_node("library_visual_scenes");
+        xml_node<>* visualScene = visualSceneRoot->first_node("visual_scene");
+        xml_node<>* visualMeshNode = getChild(visualScene, "node", "name", strtok(meshName, "-"));
+        xml_node<>* meshMatrix = visualMeshNode->first_node("matrix");
+        
+        std::vector<float> meshElements;
+        char* matrixString = meshMatrix->value();
+        char* mIter = strtok(matrixString, " ");
+        while (mIter != NULL)
+        {
+            meshElements.push_back(atof(mIter));
+            mIter = strtok(NULL, " ");
+        }
+        
+        mesh->setTransform(mat4(meshElements[0], meshElements[1], meshElements[2], meshElements[3],
+                                    meshElements[4], meshElements[5], meshElements[6], meshElements[7],
+                                    meshElements[8], meshElements[9], meshElements[10], meshElements[11],
+                                    meshElements[12], meshElements[13], meshElements[14], meshElements[15]));
+        
+
+        
+        xml_node<>* materialNode = visualMeshNode->first_node("instance_geometry");
+        
+        if (materialNode->first_node() != NULL)
+        {
+            xml_node<>* bindMaterial = materialNode->first_node();
+            xml_node<>* techniqueCommon = bindMaterial->first_node("technique_common");
+            xml_node<>* mat = techniqueCommon->first_node("instance_material");
+            char* materialName = mat->first_attribute("symbol")->value();
             
+            mesh->setMaterial(materials[materialName]);
+
         }
         
         geometryIter= geometryIter->next_sibling();
+        
         //add Trimesh to Scene
         scene->traceables.push_back(mesh);
     }

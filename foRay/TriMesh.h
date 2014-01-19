@@ -33,6 +33,11 @@ public:
     void AddTriangle(Triangle t)
     {
         triangles.push_back(t);
+     /*   printf("%f, %f, %f\n", t.A.x, t.A.y, t.A.z);
+        printf("%f, %f, %f\n", t.B.x, t.B.y, t.B.z);
+        printf("%f, %f, %f\n", t.C.x, t.C.y, t.C.z);
+        printf("----------\n");*/
+
     }
     
     bool intersect(Ray* r, RaycastHit* hit)
@@ -50,6 +55,7 @@ public:
                     hit->t = tempHit.t;
                     hit->u = tempHit.u;
                     hit->v = tempHit.v;
+                    
                     hit->contactNormal = tempHit.contactNormal;
                     hitFlag = true;
 
@@ -58,6 +64,16 @@ public:
         }
        
         return hitFlag;
+    }
+    
+    void setTransform(mat4 tMatrix)
+    {
+        transform = tMatrix;
+    }
+    
+    void setMaterial(std::shared_ptr<Material> material)
+    {
+        
     }
 };
 #endif /* defined(__Clusterwink__TriMesh__) */

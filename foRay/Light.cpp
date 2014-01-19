@@ -7,3 +7,8 @@
 //
 
 #include "Light.h"
+
+Light::Light(LightProperties properties)
+{
+    transform = properties.transform;
+}

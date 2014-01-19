@@ -14,15 +14,20 @@
 class LambertMaterial : public Material
 {
 public:
-    LambertMaterial(){}
-    LambertMaterial(vec3 color):col(color){}
     
-    void setColor(vec3 color){col = color;}
+    LambertMaterial(MaterialProperties properties) : Material(properties)
+    {
+        diffuse = properties.diffuse;
+        emission = properties.emission;
+        ambient = properties.ambient;
+    }
     
     ~LambertMaterial(){}
     
 private:
-    vec3 col;
+    vec4 diffuse;
+    vec4 emission;
+    vec4 ambient;
 };
 
 #endif /* defined(__foRay__LambertMaterial__) */

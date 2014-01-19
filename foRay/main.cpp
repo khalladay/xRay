@@ -65,7 +65,7 @@ void trace(Ray* r, RaycastHit* hit, vec3* col, float uvy, Scene* scn, int bounce
                 
                 vec3 hitPoint = r->origin + r->direction*hit->t;
                 vec3 viewDirection = scn->cam.position - hitPoint;
-             //   *col = abs(hit->contactNormal);
+
                 *col = scn->traceables[i]->material->sample(hitPoint, hit->contactNormal, LIGHT_DIR, vec3(0.0f), viewDirection);
                 
                 
@@ -125,43 +125,6 @@ int main(int argc, const char * argv[])
     vec3 image[512][512];
 
     std::shared_ptr<Scene> scene = SceneDirector::buildScene(new ColladaSceneBuilder("/Users/kylehalladay/Documents/Development/Mac OS X/foRay/res/scene1.dae"));
-    /*
-    for (int y = 0; y < 512; y++)
-    {
-        for (int x = 0; x < 512; x++)
-        {
-            vec3 col = vec3(0.0f);
-            int count = 0;
-            for (float antiX = - 0.5f; antiX < 0.5f; antiX+=(1.0f/ANTI_ALIAS))
-            {
-                //float antiY = 0.0f;
-                for (float antiY =  - 0.5f; antiY < 0.5f; antiY += (1.0f/ANTI_ALIAS))
-                {
-                    vec2 uv = -1.0f + 2.0f * vec2(x + antiX, y + antiY) / vec2(512.0f);
-                    vec3 lookDirection = normalize(scene.cam.lookPoint - scene.cam.position);
-                    vec3 viewPlaneU = normalize(cross(scene.cam.up, lookDirection));
-                    vec3 viewPlaneV = cross(lookDirection, viewPlaneU);
-                    vec3 viewCenter = lookDirection + scene.cam.position;
-                    
-                    vec3 fragWorldPos = viewCenter + (uv.x * viewPlaneU * 1.0f) + (uv.y * viewPlaneV);
-                    vec3 fragWorldToCamPos = normalize(fragWorldPos - scene.cam.position);
-                    Ray r0(scene.cam.position, normalize(fragWorldToCamPos), 0.0f, 100.0f);
-                    RaycastHit h0;
-                    vec3 c = vec3(0.0f);
-                    trace(&r0, &h0, &c, uv.y, &scene, NUM_BOUNCES);
-                    col += c;
-                    count++;
-
-                }
-            }
-            col = col / (float)count;
-
-            image[x][y] =col;
-        }
-    }
-     */
-    
-    //writeArrayToFile(image);
     
     return 0;
 }

@@ -57,6 +57,14 @@ public:
         }
         
         
+        properties.transform =  mat4(elements[0], elements[1], elements[2], elements[3],
+                                elements[4], elements[5], elements[6], elements[7],
+                                elements[8], elements[9], elements[10], elements[11],
+                                elements[12], elements[13], elements[14], elements[15]);
+        
+        
+
+        
         if (plist.find("constant_attenuation") != plist.end())
         {
             properties.constantAttenuation = atof(plist["constant_attenuation"].c_str());
