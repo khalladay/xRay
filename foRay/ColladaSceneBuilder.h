@@ -17,6 +17,7 @@
 #include "Scene.h"
 #include "SceneBuilder.h"
 #include "Material.h"
+#include "Light.h"
 
 using namespace rapidxml;
 using namespace glm;
@@ -60,7 +61,8 @@ private:
      * attributeVal or NULL if no result found */
     xml_node<>* getChild(xml_node<>* parent, std::string childName);
     xml_node<>* getChild(xml_node<>* parent, std::string childName, std::string attributeName, std::string attributeVal);
-
+    LightProperties parseLightProperties(std::map<std::string,std::string> plist);
+    MaterialProperties parseMaterialProperties(std::map<std::string, std::string> plist);
     
 };
 #endif /* defined(__foRay__ColladaSceneBuilder__) */

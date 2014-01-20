@@ -122,7 +122,7 @@ int main(int argc, const char * argv[])
     {
         printf("Incorrect ");
     }
-    vec3 image[512][512];
+    //vec3 image[512][512];
 
     std::shared_ptr<Scene> scene = SceneDirector::buildScene(new ColladaSceneBuilder("/Users/kylehalladay/Documents/Development/Mac OS X/foRay/res/scene1.dae"));
     

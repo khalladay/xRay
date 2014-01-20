@@ -125,8 +125,9 @@ void ColladaSceneBuilder::buildLights()
         char* matrix = sceneLight->first_node("matrix")->value();
         
         lightPlist["transform"] = std::string(matrix);
+        LightProperties properties = parseLightProperties(lightPlist);
         
-        std::shared_ptr<Light> lightPtr = LightFactory::build(lightPlist);
+        std::shared_ptr<Light> lightPtr = LightFactory::build(properties, lightPlist["type"]);
         
         scene->lights.push_back(lightPtr);
         lightIter = lightIter->next_sibling();
@@ -145,7 +146,7 @@ void ColladaSceneBuilder::buildMaterials()
     while(effectIter != NULL)
     {
         count++;
-        char* effectName = effectIter->first_attribute("id")->value();
+        //char* effectName = effectIter->first_attribute("id")->value();
         std::map<std::string, std::string> materialProperties;
         
         xml_node<>* profile = effectIter->first_node("profile_COMMON");
@@ -163,7 +164,9 @@ void ColladaSceneBuilder::buildMaterials()
             propertyIter = propertyIter->next_sibling();
         }
         
-        materials["effectName"] = MaterialFactory::build(materialProperties);
+        MaterialProperties properties = parseMaterialProperties(materialProperties);
+        
+        materials["effectName"] = MaterialFactory::build(properties, materialProperties["type"]);
         
         effectIter = effectIter->next_sibling();
     }
@@ -320,6 +323,117 @@ xml_node<>* ColladaSceneBuilder::getChild(xml_node<>* parent, std::string childN
         }
     }
     return child;
-
 }
+
+LightProperties ColladaSceneBuilder::parseLightProperties(std::map<std::string,std::string> plist)
+{
+    LightProperties properties;
+    
+    if (plist.find("transform") == plist.end())
+    {
+        fprintf(stderr, "No transformation matrix was found in LightProperties list %s : %d\n", __FILE__, __LINE__);
+    }
+    
+    std::vector<float> matrixElements;
+    char* elements = (char*)plist["transform"].c_str();
+    char* eIter = strtok(elements, " ");
+    while (eIter != NULL)
+    {
+        matrixElements.push_back(atof(eIter));
+        eIter = strtok(NULL, " ");
+    }
+    
+    
+    properties.transform =  mat4(elements[0], elements[1], elements[2], elements[3],
+                                 elements[4], elements[5], elements[6], elements[7],
+                                 elements[8], elements[9], elements[10], elements[11],
+                                 elements[12], elements[13], elements[14], elements[15]);
+    
+    
+    
+    
+    if (plist.find("constant_attenuation") != plist.end())
+    {
+        properties.constantAttenuation = atof(plist["constant_attenuation"].c_str());
+    }
+    if (plist.find("linear_attenuation") != plist.end())
+    {
+        properties.linearAttenuation = atof(plist["linear_attenuation"].c_str());
+    }
+    if (plist.find("quadratic_attenuation") != plist.end())
+    {
+        properties.quadraticAttenuation = atof(plist["quadratic_attenuation"].c_str());
+    }
+    
+    return properties;
+}
+
+MaterialProperties ColladaSceneBuilder::parseMaterialProperties(std::map<std::string, std::string> plist)
+{
+    MaterialProperties properties;
+    
+    if (plist.find("index_of_refraction") != plist.end())
+    {
+        properties.indexOfRefraction = atof(plist["index_of_refraction"].c_str());
+    }
+    if (plist.find("shininess") != plist.end())
+    {
+        properties.shininess = atof(plist["shininess"].c_str());
+    }
+    if (plist.find("emission") != plist.end())
+    {
+        std::vector<float> elements;
+        char* vIter = strtok((char*)(plist["emission"].c_str()), " ");
+        while (vIter != NULL)
+        {
+            elements.push_back(atof(vIter));
+            vIter = strtok(NULL, " ");
+        }
+        
+        properties.emission = vec4(elements[0], elements[1], elements[2], elements[3]);
+    }
+    
+    if (plist.find("ambient") != plist.end())
+    {
+        std::vector<float> elements;
+        char* vIter = strtok((char*)plist["ambient"].c_str(), " ");
+        while (vIter != NULL)
+        {
+            elements.push_back(atof(vIter));
+            vIter = strtok(NULL, " ");
+        }
+        
+        properties.ambient = vec4(elements[0], elements[1], elements[2], elements[3]);
+    }
+    
+    if (plist.find("diffuse") != plist.end())
+    {
+        std::vector<float> elements;
+        char* vIter = strtok((char*)plist["diffuse"].c_str(), " ");
+        while (vIter != NULL)
+        {
+            elements.push_back(atof(vIter));
+            vIter = strtok(NULL, " ");
+        }
+        
+        properties.diffuse = vec4(elements[0], elements[1], elements[2], elements[3]);
+    }
+    
+    if (plist.find("specular") != plist.end())
+    {
+        std::vector<float> elements;
+        char* vIter = strtok((char*)plist["specular"].c_str(), " ");
+        while (vIter != NULL)
+        {
+            elements.push_back(atof(vIter));
+            vIter = strtok(NULL, " ");
+        }
+        
+        properties.specular = vec4(elements[0], elements[1], elements[2], elements[3]);
+    }
+    
+    return properties;
+}
+
+
 

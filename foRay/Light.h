@@ -11,6 +11,10 @@
 
 #include <map>
 #include "glm.hpp"
+
+#define kLightTypePoint 0
+#define kLightTypeDirectional 1
+
 using namespace glm;
 
 typedef struct

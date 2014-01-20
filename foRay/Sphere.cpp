@@ -24,7 +24,7 @@ bool Sphere::intersect(Ray *r, RaycastHit* hit)
     float t3 = sqrt(radius2 - d2);
     
     float t0 = t2-t3;
-    float t1 = t2+t3;
+    //float t1 = t2+t3;
     
     if (t0 > r->tmax) return  false;
     else hit->t = t0;

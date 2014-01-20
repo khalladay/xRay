@@ -64,11 +64,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -80,11 +80,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -96,11 +96,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -112,11 +112,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
             <Locations>
@@ -158,11 +158,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -174,11 +174,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863897.858247"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -190,11 +190,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411867950.156539"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
             <Locations>
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411867950.156539"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
             <Locations>
@@ -338,11 +338,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
             <Locations>
@@ -384,11 +384,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -400,11 +400,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -416,11 +416,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -556,11 +556,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411869730.905833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "ColladaSceneBuilder::buildLights()"
             landmarkType = "5">
          </BreakpointContent>
@@ -571,28 +571,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "foRay/LightFactory.h"
-            timestampString = "411660702.693127"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "build(std::map&lt;std::string,std::string&gt; plist)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411867950.156539"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -604,11 +588,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411867950.156539"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
             <Locations>
@@ -650,11 +634,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411867950.156539"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -666,11 +650,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411867950.156539"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -697,28 +681,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "foRay/MaterialFactory.h"
-            timestampString = "411861986.822144"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "parsePropertyPlist(std::map&lt;std::string, std::string&gt; plist)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411869730.905833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "ColladaSceneBuilder::buildMaterials()"
             landmarkType = "5">
          </BreakpointContent>
@@ -730,11 +698,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863119.491054"
+            timestampString = "411869730.905833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "ColladaSceneBuilder::buildMaterials()"
             landmarkType = "5">
             <Locations>
@@ -790,11 +758,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863949.521708"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -806,11 +774,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411863949.919607"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
          </BreakpointContent>
@@ -822,11 +790,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411867950.156539"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
             <Locations>
@@ -938,11 +906,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/ColladaSceneBuilder.cpp"
-            timestampString = "411867950.156539"
+            timestampString = "411870009.971887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "ColladaSceneBuilder::buildMeshes()"
             landmarkType = "5">
             <Locations>
