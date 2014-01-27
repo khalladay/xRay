@@ -17,7 +17,7 @@ class SceneDirector
 {
 public:
         
-    static std::shared_ptr<Scene> buildScene(SceneBuilder* builder)
+    static std::unique_ptr<Scene> buildScene(SceneBuilder* builder)
     {
         builder->buildCamera();
         builder->buildLights();

@@ -20,6 +20,8 @@ public:
     
     float tmin, tmax;
     
+    Ray(){}
+    
     Ray(vec3 orig, vec3 dir, float min, float max) :
     origin(orig), direction(dir),tmin(min), tmax(max)
     {

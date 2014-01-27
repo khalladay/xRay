@@ -12,13 +12,11 @@
 #include "glm.hpp"
 using namespace glm;
 
+/* . If the camera is transformed with a 4x4 matrices to render the scene from a different point of view, all we need to do is to apply this transformation matrix to the camera rays' directions and origin. Note that all the camera rays share the same origin. This process is depicted in figure 7.*/
+
 class Camera
 {
-public:
-    vec3 position;
-    vec3 lookPoint;
-    vec3 up;
-    
+public:    
     float fov;
     float aspectRatio;
     float zNear;

@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1CD42B61885791C00D93352 /* ColladaSceneBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1CD42B41885791C00D93352 /* ColladaSceneBuilder.cpp */; };
-		A1CD42BF18880CE800D93352 /* DirectionalLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1CD42BD18880CE800D93352 /* DirectionalLight.cpp */; };
-		A1CD42C51888DCE000D93352 /* PointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1CD42C31888DCE000D93352 /* PointLight.cpp */; };
-		A1EF09BE1879DBC8000E3A9F /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08A01879DB1B000E3A9F /* Camera.cpp */; };
-		A1EF09BF1879DBCA000E3A9F /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08A31879DB1B000E3A9F /* Cube.cpp */; };
-		A1EF09C01879DBCC000E3A9F /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08A61879DB1B000E3A9F /* Light.cpp */; };
+		A13DF619188FF11300C12872 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A13DF618188FF11300C12872 /* libboost_thread.a */; };
+		A13DF6241891433400C12872 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A13DF6231891433400C12872 /* libboost_system.a */; };
+		A13DF6401891ED5B00C12872 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF63618915E0500C12872 /* Cube.cpp */; };
+		A13DF6411891ED5D00C12872 /* Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF63818915E0500C12872 /* Plane.cpp */; };
+		A13DF6421891ED5E00C12872 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF63A18915E0500C12872 /* Sphere.cpp */; };
+		A13DF6431891ED6000C12872 /* Traceable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF63C18915E0500C12872 /* Traceable.cpp */; };
+		A13DF6441891ED6200C12872 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF63E18915E0500C12872 /* Triangle.cpp */; };
+		A13DF6481891ED6A00C12872 /* CPURenderDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF62918915D9300C12872 /* CPURenderDevice.cpp */; };
+		A13DF6491891ED6C00C12872 /* RenderDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF62B18915D9300C12872 /* RenderDevice.cpp */; };
+		A13DF6721895CAB800C12872 /* ColladaSceneBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF66A1895CA6000C12872 /* ColladaSceneBuilder.cpp */; };
+		A13DF6731895CABA00C12872 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF66C1895CA6000C12872 /* Scene.cpp */; };
+		A13DF6741895CAC100C12872 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF65D1895CA5B00C12872 /* Camera.cpp */; };
+		A13DF6751895CAC400C12872 /* TriMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF6671895CA5B00C12872 /* TriMesh.cpp */; };
+		A13DF6761895CAC900C12872 /* DirectionalLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF6601895CA5B00C12872 /* DirectionalLight.cpp */; };
+		A13DF6771895CACF00C12872 /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF6621895CA5B00C12872 /* Light.cpp */; };
+		A13DF6781895CAD200C12872 /* PointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF6651895CA5B00C12872 /* PointLight.cpp */; };
+		A13DF6791895CADB00C12872 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF6501895CA4800C12872 /* Ray.cpp */; };
+		A13DF67A1895CADD00C12872 /* RaycastHit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF6521895CA4800C12872 /* RaycastHit.cpp */; };
+		A13DF67B1895CADF00C12872 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF6541895CA4800C12872 /* Renderer.cpp */; };
+		A13DF67E1895FD2700C12872 /* SceneTestRenderDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A13DF67C1895FD2700C12872 /* SceneTestRenderDevice.cpp */; };
 		A1EF09C11879DBCF000E3A9F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08A81879DB1B000E3A9F /* main.cpp */; };
-		A1EF09C21879DBD0000E3A9F /* Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08AA1879DB1B000E3A9F /* Plane.cpp */; };
-		A1EF09C31879DBD2000E3A9F /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08AC1879DB1B000E3A9F /* Ray.cpp */; };
-		A1EF09C41879DBD5000E3A9F /* RaycastHit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08AE1879DB1B000E3A9F /* RaycastHit.cpp */; };
-		A1EF09C51879DBD7000E3A9F /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08B01879DB1B000E3A9F /* Scene.cpp */; };
-		A1EF09C61879DBD9000E3A9F /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08B41879DB1B000E3A9F /* Sphere.cpp */; };
-		A1EF09C71879DBDB000E3A9F /* Traceable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08B61879DB1B000E3A9F /* Traceable.cpp */; };
-		A1EF09C81879DBDC000E3A9F /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08B81879DB1B000E3A9F /* Triangle.cpp */; };
-		A1EF09C91879DBDE000E3A9F /* TriMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1EF08BA1879DB1B000E3A9F /* TriMesh.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,45 +43,57 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A13DF618188FF11300C12872 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = "../../../../../../boost_1_55_0/bin.v2/libs/thread/build/darwin-4.2.1/release/link-static/threading-multi/libboost_thread.a"; sourceTree = "<group>"; };
+		A13DF6231891433400C12872 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = "../../../../../../boost_1_55_0/bin.v2/libs/system/build/darwin-4.2.1/release/link-static/threading-multi/libboost_system.a"; sourceTree = "<group>"; };
+		A13DF62918915D9300C12872 /* CPURenderDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CPURenderDevice.cpp; sourceTree = "<group>"; };
+		A13DF62A18915D9300C12872 /* CPURenderDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPURenderDevice.h; sourceTree = "<group>"; };
+		A13DF62B18915D9300C12872 /* RenderDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RenderDevice.cpp; sourceTree = "<group>"; };
+		A13DF62C18915D9300C12872 /* RenderDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderDevice.h; sourceTree = "<group>"; };
+		A13DF63618915E0500C12872 /* Cube.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
+		A13DF63718915E0500C12872 /* Cube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
+		A13DF63818915E0500C12872 /* Plane.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Plane.cpp; sourceTree = "<group>"; };
+		A13DF63918915E0500C12872 /* Plane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
+		A13DF63A18915E0500C12872 /* Sphere.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = "<group>"; };
+		A13DF63B18915E0500C12872 /* Sphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
+		A13DF63C18915E0500C12872 /* Traceable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Traceable.cpp; sourceTree = "<group>"; };
+		A13DF63D18915E0500C12872 /* Traceable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Traceable.h; sourceTree = "<group>"; };
+		A13DF63E18915E0500C12872 /* Triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle.cpp; sourceTree = "<group>"; };
+		A13DF63F18915E0500C12872 /* Triangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
+		A13DF64C1892995D00C12872 /* RenderDevice_intern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderDevice_intern.h; sourceTree = "<group>"; };
+		A13DF6501895CA4800C12872 /* Ray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ray.cpp; sourceTree = "<group>"; };
+		A13DF6511895CA4800C12872 /* Ray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = "<group>"; };
+		A13DF6521895CA4800C12872 /* RaycastHit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RaycastHit.cpp; sourceTree = "<group>"; };
+		A13DF6531895CA4800C12872 /* RaycastHit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RaycastHit.h; sourceTree = "<group>"; };
+		A13DF6541895CA4800C12872 /* Renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		A13DF6551895CA4800C12872 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		A13DF6571895CA5200C12872 /* CheckerMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckerMaterial.h; sourceTree = "<group>"; };
+		A13DF6581895CA5200C12872 /* LambertMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LambertMaterial.h; sourceTree = "<group>"; };
+		A13DF6591895CA5200C12872 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
+		A13DF65A1895CA5200C12872 /* MaterialFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaterialFactory.h; sourceTree = "<group>"; };
+		A13DF65B1895CA5200C12872 /* PhongMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhongMaterial.h; sourceTree = "<group>"; };
+		A13DF65D1895CA5B00C12872 /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		A13DF65E1895CA5B00C12872 /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		A13DF6601895CA5B00C12872 /* DirectionalLight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DirectionalLight.cpp; sourceTree = "<group>"; };
+		A13DF6611895CA5B00C12872 /* DirectionalLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectionalLight.h; sourceTree = "<group>"; };
+		A13DF6621895CA5B00C12872 /* Light.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
+		A13DF6631895CA5B00C12872 /* Light.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+		A13DF6641895CA5B00C12872 /* LightFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightFactory.h; sourceTree = "<group>"; };
+		A13DF6651895CA5B00C12872 /* PointLight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PointLight.cpp; sourceTree = "<group>"; };
+		A13DF6661895CA5B00C12872 /* PointLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointLight.h; sourceTree = "<group>"; };
+		A13DF6671895CA5B00C12872 /* TriMesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TriMesh.cpp; sourceTree = "<group>"; };
+		A13DF6681895CA5B00C12872 /* TriMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriMesh.h; sourceTree = "<group>"; };
+		A13DF66A1895CA6000C12872 /* ColladaSceneBuilder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ColladaSceneBuilder.cpp; sourceTree = "<group>"; };
+		A13DF66B1895CA6000C12872 /* ColladaSceneBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColladaSceneBuilder.h; sourceTree = "<group>"; };
+		A13DF66C1895CA6000C12872 /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		A13DF66D1895CA6000C12872 /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		A13DF66E1895CA6000C12872 /* SceneBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneBuilder.h; sourceTree = "<group>"; };
+		A13DF66F1895CA6000C12872 /* SceneDirector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDirector.h; sourceTree = "<group>"; };
+		A13DF6711895CA6700C12872 /* util_array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util_array.h; sourceTree = "<group>"; };
+		A13DF67C1895FD2700C12872 /* SceneTestRenderDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneTestRenderDevice.cpp; sourceTree = "<group>"; };
+		A13DF67D1895FD2700C12872 /* SceneTestRenderDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneTestRenderDevice.h; sourceTree = "<group>"; };
 		A19D7EAC1859700F0009D962 /* foRay */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = foRay; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1CD42AF1885790900D93352 /* SceneDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDirector.h; sourceTree = "<group>"; };
-		A1CD42B21885791100D93352 /* SceneBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneBuilder.h; sourceTree = "<group>"; };
-		A1CD42B41885791C00D93352 /* ColladaSceneBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ColladaSceneBuilder.cpp; sourceTree = "<group>"; };
-		A1CD42B51885791C00D93352 /* ColladaSceneBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColladaSceneBuilder.h; sourceTree = "<group>"; };
-		A1CD42B81887707700D93352 /* PhongMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhongMaterial.h; sourceTree = "<group>"; };
-		A1CD42BB1887724700D93352 /* LambertMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LambertMaterial.h; sourceTree = "<group>"; };
-		A1CD42BD18880CE800D93352 /* DirectionalLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectionalLight.cpp; sourceTree = "<group>"; };
-		A1CD42BE18880CE800D93352 /* DirectionalLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionalLight.h; sourceTree = "<group>"; };
-		A1CD42C11888111700D93352 /* LightFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightFactory.h; sourceTree = "<group>"; };
-		A1CD42C31888DCE000D93352 /* PointLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointLight.cpp; sourceTree = "<group>"; };
-		A1CD42C41888DCE000D93352 /* PointLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointLight.h; sourceTree = "<group>"; };
-		A1CD42C7188967B800D93352 /* MaterialFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaterialFactory.h; sourceTree = "<group>"; };
-		A1EF08A01879DB1B000E3A9F /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
-		A1EF08A11879DB1B000E3A9F /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
-		A1EF08A21879DB1B000E3A9F /* CheckerMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckerMaterial.h; sourceTree = "<group>"; };
-		A1EF08A31879DB1B000E3A9F /* Cube.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
-		A1EF08A41879DB1B000E3A9F /* Cube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
-		A1EF08A61879DB1B000E3A9F /* Light.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
-		A1EF08A71879DB1B000E3A9F /* Light.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
 		A1EF08A81879DB1B000E3A9F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		A1EF08A91879DB1B000E3A9F /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
-		A1EF08AA1879DB1B000E3A9F /* Plane.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Plane.cpp; sourceTree = "<group>"; };
-		A1EF08AB1879DB1B000E3A9F /* Plane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
-		A1EF08AC1879DB1B000E3A9F /* Ray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ray.cpp; sourceTree = "<group>"; };
-		A1EF08AD1879DB1B000E3A9F /* Ray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = "<group>"; };
-		A1EF08AE1879DB1B000E3A9F /* RaycastHit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RaycastHit.cpp; sourceTree = "<group>"; };
-		A1EF08AF1879DB1B000E3A9F /* RaycastHit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RaycastHit.h; sourceTree = "<group>"; };
-		A1EF08B01879DB1B000E3A9F /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
-		A1EF08B11879DB1B000E3A9F /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		A1EF08B21879DB1B000E3A9F /* SimpleRayTracer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SimpleRayTracer.1; sourceTree = "<group>"; };
-		A1EF08B41879DB1B000E3A9F /* Sphere.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = "<group>"; };
-		A1EF08B51879DB1B000E3A9F /* Sphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
-		A1EF08B61879DB1B000E3A9F /* Traceable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Traceable.cpp; sourceTree = "<group>"; };
-		A1EF08B71879DB1B000E3A9F /* Traceable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Traceable.h; sourceTree = "<group>"; };
-		A1EF08B81879DB1B000E3A9F /* Triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle.cpp; sourceTree = "<group>"; };
-		A1EF08B91879DB1B000E3A9F /* Triangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
-		A1EF08BA1879DB1B000E3A9F /* TriMesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TriMesh.cpp; sourceTree = "<group>"; };
-		A1EF08BB1879DB1B000E3A9F /* TriMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriMesh.h; sourceTree = "<group>"; };
 		A1EF08BD1879DB2C000E3A9F /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		A1EF08BF1879DB2C000E3A9F /* _detail.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = _detail.hpp; sourceTree = "<group>"; };
 		A1EF08C01879DB2C000E3A9F /* _fixes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = _fixes.hpp; sourceTree = "<group>"; };
@@ -314,15 +332,122 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13DF6241891433400C12872 /* libboost_system.a in Frameworks */,
+				A13DF619188FF11300C12872 /* libboost_thread.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A13DF62818915D9300C12872 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				A13DF67C1895FD2700C12872 /* SceneTestRenderDevice.cpp */,
+				A13DF67D1895FD2700C12872 /* SceneTestRenderDevice.h */,
+				A13DF62918915D9300C12872 /* CPURenderDevice.cpp */,
+				A13DF62A18915D9300C12872 /* CPURenderDevice.h */,
+				A13DF62B18915D9300C12872 /* RenderDevice.cpp */,
+				A13DF62C18915D9300C12872 /* RenderDevice.h */,
+				A13DF64C1892995D00C12872 /* RenderDevice_intern.h */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		A13DF63518915E0500C12872 /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				A13DF63618915E0500C12872 /* Cube.cpp */,
+				A13DF63718915E0500C12872 /* Cube.h */,
+				A13DF63818915E0500C12872 /* Plane.cpp */,
+				A13DF63918915E0500C12872 /* Plane.h */,
+				A13DF63A18915E0500C12872 /* Sphere.cpp */,
+				A13DF63B18915E0500C12872 /* Sphere.h */,
+				A13DF63C18915E0500C12872 /* Traceable.cpp */,
+				A13DF63D18915E0500C12872 /* Traceable.h */,
+				A13DF63E18915E0500C12872 /* Triangle.cpp */,
+				A13DF63F18915E0500C12872 /* Triangle.h */,
+			);
+			path = Primitives;
+			sourceTree = "<group>";
+		};
+		A13DF64F1895CA4800C12872 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A13DF6501895CA4800C12872 /* Ray.cpp */,
+				A13DF6511895CA4800C12872 /* Ray.h */,
+				A13DF6521895CA4800C12872 /* RaycastHit.cpp */,
+				A13DF6531895CA4800C12872 /* RaycastHit.h */,
+				A13DF6541895CA4800C12872 /* Renderer.cpp */,
+				A13DF6551895CA4800C12872 /* Renderer.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A13DF6561895CA5200C12872 /* Materials */ = {
+			isa = PBXGroup;
+			children = (
+				A13DF6571895CA5200C12872 /* CheckerMaterial.h */,
+				A13DF6581895CA5200C12872 /* LambertMaterial.h */,
+				A13DF6591895CA5200C12872 /* Material.h */,
+				A13DF65A1895CA5200C12872 /* MaterialFactory.h */,
+				A13DF65B1895CA5200C12872 /* PhongMaterial.h */,
+			);
+			path = Materials;
+			sourceTree = "<group>";
+		};
+		A13DF65C1895CA5B00C12872 /* Scene Objects */ = {
+			isa = PBXGroup;
+			children = (
+				A13DF65D1895CA5B00C12872 /* Camera.cpp */,
+				A13DF65E1895CA5B00C12872 /* Camera.h */,
+				A13DF65F1895CA5B00C12872 /* Lights */,
+				A13DF6671895CA5B00C12872 /* TriMesh.cpp */,
+				A13DF6681895CA5B00C12872 /* TriMesh.h */,
+			);
+			path = "Scene Objects";
+			sourceTree = "<group>";
+		};
+		A13DF65F1895CA5B00C12872 /* Lights */ = {
+			isa = PBXGroup;
+			children = (
+				A13DF6601895CA5B00C12872 /* DirectionalLight.cpp */,
+				A13DF6611895CA5B00C12872 /* DirectionalLight.h */,
+				A13DF6621895CA5B00C12872 /* Light.cpp */,
+				A13DF6631895CA5B00C12872 /* Light.h */,
+				A13DF6641895CA5B00C12872 /* LightFactory.h */,
+				A13DF6651895CA5B00C12872 /* PointLight.cpp */,
+				A13DF6661895CA5B00C12872 /* PointLight.h */,
+			);
+			path = Lights;
+			sourceTree = "<group>";
+		};
+		A13DF6691895CA6000C12872 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A13DF66A1895CA6000C12872 /* ColladaSceneBuilder.cpp */,
+				A13DF66B1895CA6000C12872 /* ColladaSceneBuilder.h */,
+				A13DF66C1895CA6000C12872 /* Scene.cpp */,
+				A13DF66D1895CA6000C12872 /* Scene.h */,
+				A13DF66E1895CA6000C12872 /* SceneBuilder.h */,
+				A13DF66F1895CA6000C12872 /* SceneDirector.h */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A13DF6701895CA6700C12872 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A13DF6711895CA6700C12872 /* util_array.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		A19D7EA31859700F0009D962 = {
 			isa = PBXGroup;
 			children = (
+				A13DF6231891433400C12872 /* libboost_system.a */,
+				A13DF618188FF11300C12872 /* libboost_thread.a */,
 				A1EF08BC1879DB2C000E3A9F /* glm */,
 				A1EF09A21879DB2D000E3A9F /* rapidxml-1.13 */,
 				A1EF089F1879DB1B000E3A9F /* foRay */,
@@ -338,26 +463,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A1CD42AA188578DE00D93352 /* Scene Building */ = {
-			isa = PBXGroup;
-			children = (
-				A1CD42AF1885790900D93352 /* SceneDirector.h */,
-				A1CD42B21885791100D93352 /* SceneBuilder.h */,
-				A1CD42B41885791C00D93352 /* ColladaSceneBuilder.cpp */,
-				A1CD42B51885791C00D93352 /* ColladaSceneBuilder.h */,
-			);
-			name = "Scene Building";
-			sourceTree = "<group>";
-		};
 		A1EF089F1879DB1B000E3A9F /* foRay */ = {
 			isa = PBXGroup;
 			children = (
 				A1EF08A81879DB1B000E3A9F /* main.cpp */,
-				A1EF09CE1879DCCA000E3A9F /* Containers */,
-				A1EF09CD1879DCA8000E3A9F /* Lights */,
-				A1EF09CC1879DC91000E3A9F /* Core */,
-				A1EF09CB1879DC75000E3A9F /* Shaders and Materials */,
-				A1EF09CA1879DBF7000E3A9F /* Primitives */,
+				A13DF64F1895CA4800C12872 /* Core */,
+				A13DF62818915D9300C12872 /* Devices */,
+				A13DF6561895CA5200C12872 /* Materials */,
+				A13DF63518915E0500C12872 /* Primitives */,
+				A13DF65C1895CA5B00C12872 /* Scene Objects */,
+				A13DF6691895CA6000C12872 /* Scenes */,
+				A13DF6701895CA6700C12872 /* Util */,
 				A1EF08B21879DB1B000E3A9F /* SimpleRayTracer.1 */,
 			);
 			path = foRay;
@@ -642,74 +758,6 @@
 			path = "external/rapidxml-1.13";
 			sourceTree = "<group>";
 		};
-		A1EF09CA1879DBF7000E3A9F /* Primitives */ = {
-			isa = PBXGroup;
-			children = (
-				A1EF08A31879DB1B000E3A9F /* Cube.cpp */,
-				A1EF08A41879DB1B000E3A9F /* Cube.h */,
-				A1EF08AA1879DB1B000E3A9F /* Plane.cpp */,
-				A1EF08AB1879DB1B000E3A9F /* Plane.h */,
-				A1EF08B41879DB1B000E3A9F /* Sphere.cpp */,
-				A1EF08B51879DB1B000E3A9F /* Sphere.h */,
-				A1EF08B61879DB1B000E3A9F /* Traceable.cpp */,
-				A1EF08B71879DB1B000E3A9F /* Traceable.h */,
-				A1EF08B81879DB1B000E3A9F /* Triangle.cpp */,
-				A1EF08B91879DB1B000E3A9F /* Triangle.h */,
-			);
-			name = Primitives;
-			sourceTree = "<group>";
-		};
-		A1EF09CB1879DC75000E3A9F /* Shaders and Materials */ = {
-			isa = PBXGroup;
-			children = (
-				A1EF08A91879DB1B000E3A9F /* Material.h */,
-				A1EF08A21879DB1B000E3A9F /* CheckerMaterial.h */,
-				A1CD42B81887707700D93352 /* PhongMaterial.h */,
-				A1CD42BB1887724700D93352 /* LambertMaterial.h */,
-				A1CD42C7188967B800D93352 /* MaterialFactory.h */,
-			);
-			name = "Shaders and Materials";
-			sourceTree = "<group>";
-		};
-		A1EF09CC1879DC91000E3A9F /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				A1CD42AA188578DE00D93352 /* Scene Building */,
-				A1EF08A01879DB1B000E3A9F /* Camera.cpp */,
-				A1EF08A11879DB1B000E3A9F /* Camera.h */,
-				A1EF08AC1879DB1B000E3A9F /* Ray.cpp */,
-				A1EF08AD1879DB1B000E3A9F /* Ray.h */,
-				A1EF08AE1879DB1B000E3A9F /* RaycastHit.cpp */,
-				A1EF08AF1879DB1B000E3A9F /* RaycastHit.h */,
-				A1EF08B01879DB1B000E3A9F /* Scene.cpp */,
-				A1EF08B11879DB1B000E3A9F /* Scene.h */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		A1EF09CD1879DCA8000E3A9F /* Lights */ = {
-			isa = PBXGroup;
-			children = (
-				A1EF08A71879DB1B000E3A9F /* Light.h */,
-				A1EF08A61879DB1B000E3A9F /* Light.cpp */,
-				A1CD42BD18880CE800D93352 /* DirectionalLight.cpp */,
-				A1CD42BE18880CE800D93352 /* DirectionalLight.h */,
-				A1CD42C11888111700D93352 /* LightFactory.h */,
-				A1CD42C31888DCE000D93352 /* PointLight.cpp */,
-				A1CD42C41888DCE000D93352 /* PointLight.h */,
-			);
-			name = Lights;
-			sourceTree = "<group>";
-		};
-		A1EF09CE1879DCCA000E3A9F /* Containers */ = {
-			isa = PBXGroup;
-			children = (
-				A1EF08BA1879DB1B000E3A9F /* TriMesh.cpp */,
-				A1EF08BB1879DB1B000E3A9F /* TriMesh.h */,
-			);
-			name = Containers;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -761,21 +809,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1EF09BE1879DBC8000E3A9F /* Camera.cpp in Sources */,
-				A1EF09BF1879DBCA000E3A9F /* Cube.cpp in Sources */,
-				A1EF09C01879DBCC000E3A9F /* Light.cpp in Sources */,
-				A1EF09C31879DBD2000E3A9F /* Ray.cpp in Sources */,
-				A1EF09C21879DBD0000E3A9F /* Plane.cpp in Sources */,
+				A13DF6721895CAB800C12872 /* ColladaSceneBuilder.cpp in Sources */,
+				A13DF6731895CABA00C12872 /* Scene.cpp in Sources */,
+				A13DF6411891ED5D00C12872 /* Plane.cpp in Sources */,
+				A13DF6741895CAC100C12872 /* Camera.cpp in Sources */,
+				A13DF6421891ED5E00C12872 /* Sphere.cpp in Sources */,
+				A13DF6751895CAC400C12872 /* TriMesh.cpp in Sources */,
+				A13DF6431891ED6000C12872 /* Traceable.cpp in Sources */,
+				A13DF6401891ED5B00C12872 /* Cube.cpp in Sources */,
+				A13DF6441891ED6200C12872 /* Triangle.cpp in Sources */,
 				A1EF09C11879DBCF000E3A9F /* main.cpp in Sources */,
-				A1EF09C41879DBD5000E3A9F /* RaycastHit.cpp in Sources */,
-				A1EF09C51879DBD7000E3A9F /* Scene.cpp in Sources */,
-				A1EF09C61879DBD9000E3A9F /* Sphere.cpp in Sources */,
-				A1EF09C71879DBDB000E3A9F /* Traceable.cpp in Sources */,
-				A1CD42B61885791C00D93352 /* ColladaSceneBuilder.cpp in Sources */,
-				A1EF09C91879DBDE000E3A9F /* TriMesh.cpp in Sources */,
-				A1EF09C81879DBDC000E3A9F /* Triangle.cpp in Sources */,
-				A1CD42C51888DCE000D93352 /* PointLight.cpp in Sources */,
-				A1CD42BF18880CE800D93352 /* DirectionalLight.cpp in Sources */,
+				A13DF6481891ED6A00C12872 /* CPURenderDevice.cpp in Sources */,
+				A13DF67E1895FD2700C12872 /* SceneTestRenderDevice.cpp in Sources */,
+				A13DF6491891ED6C00C12872 /* RenderDevice.cpp in Sources */,
+				A13DF6771895CACF00C12872 /* Light.cpp in Sources */,
+				A13DF67B1895CADF00C12872 /* Renderer.cpp in Sources */,
+				A13DF67A1895CADD00C12872 /* RaycastHit.cpp in Sources */,
+				A13DF6781895CAD200C12872 /* PointLight.cpp in Sources */,
+				A13DF6791895CADB00C12872 /* Ray.cpp in Sources */,
+				A13DF6761895CAC900C12872 /* DirectionalLight.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,8 +865,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(BOOST_HOME)\"",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lboost_system";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -845,7 +903,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(BOOST_HOME)\"",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "-lboost_system";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -853,6 +917,15 @@
 		A19D7EB61859700F0009D962 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/boost_1_55_0/bin.v2/libs/thread/build/darwin-4.2.1/release/link-static/threading-multi",
+					"/boost_1_55_0/bin.v2/libs/system/build/darwin-4.2.1/release/link-static/threading-multi",
+				);
 				PRODUCT_NAME = foRay;
 			};
 			name = Debug;
@@ -860,6 +933,11 @@
 		A19D7EB71859700F0009D962 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/boost_1_55_0/bin.v2/libs/thread/build/darwin-4.2.1/release/link-static/threading-multi",
+					"/boost_1_55_0/bin.v2/libs/system/build/darwin-4.2.1/release/link-static/threading-multi",
+				);
 				PRODUCT_NAME = foRay;
 			};
 			name = Release;

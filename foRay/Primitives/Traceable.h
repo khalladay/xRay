@@ -13,24 +13,25 @@
 #include "Ray.h"
 #include "glm.hpp"
 #include "Material.h"
-
+#include <memory>
 using namespace glm;
 
 class Traceable
 {
 public:
     int objectId;
-    mat4 transform;
-    
-    Material *material;
+    std::shared_ptr<Material> material;
     
     Traceable()
     {
     }
     
-    Traceable(mat4 transformMatrix, Material* mat, int id) : material(mat)
+    Traceable(mat4 transformMatrix, std::shared_ptr<Material> mat, int id)
     {
+        material = mat;
     }
+    
+    virtual void convertToWorldSpace(){}
     
     virtual bool intersect(Ray* r, RaycastHit* hit) = 0;
     

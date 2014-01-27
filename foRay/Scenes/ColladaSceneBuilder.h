@@ -31,6 +31,7 @@ public:
     xml_document<> doc;
     
     std::map<std::string, std::shared_ptr<Material>> materials;
+    std::map<std::string, std::shared_ptr<Material>> materialsByName;
     
     ColladaSceneBuilder(std::string filepath)
     {

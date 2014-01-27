@@ -15,18 +15,18 @@ class SceneBuilder
 {
 public:
     
-    std::shared_ptr<Scene> scene;
+    std::unique_ptr<Scene> scene;
     
     virtual void buildCamera() = 0;
     virtual void buildMaterials() = 0;
     virtual void buildLights() = 0;
     virtual void buildMeshes() = 0;
     
-    virtual std::shared_ptr<Scene> getProduct(){ return scene; }
+    virtual std::unique_ptr<Scene> getProduct(){ return std::unique_ptr<Scene>(std::move(scene)); }
     
     SceneBuilder()
     {
-        scene = std::shared_ptr<Scene>(new Scene());
+        scene = std::unique_ptr<Scene>(new Scene());
     }
     
     virtual ~SceneBuilder() {}

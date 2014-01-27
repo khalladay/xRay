@@ -23,21 +23,11 @@ class TriMesh : public Traceable
 public:
     std::vector<Triangle> triangles;
     
-    TriMesh(Material *m)
-    {
-        material = m;
-    }
-    
     TriMesh(){}
     
     void AddTriangle(Triangle t)
     {
         triangles.push_back(t);
-     /*   printf("%f, %f, %f\n", t.A.x, t.A.y, t.A.z);
-        printf("%f, %f, %f\n", t.B.x, t.B.y, t.B.z);
-        printf("%f, %f, %f\n", t.C.x, t.C.y, t.C.z);
-        printf("----------\n");*/
-
     }
     
     bool intersect(Ray* r, RaycastHit* hit)
@@ -66,14 +56,25 @@ public:
         return hitFlag;
     }
     
+    void convertToWorldSpace()
+    {
+        for (int i = 0; i < triangles.size(); i++)
+        {
+            triangles[i].transformByMatrix(transform);
+        }
+    }
+    
     void setTransform(mat4 tMatrix)
     {
         transform = tMatrix;
     }
     
-    void setMaterial(std::shared_ptr<Material> material)
+    void setMaterial(std::shared_ptr<Material> mat)
     {
-        
+        material = mat;
     }
+private:
+    mat4 transform;
+
 };
 #endif /* defined(__Clusterwink__TriMesh__) */

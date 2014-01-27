@@ -19,7 +19,7 @@ public:
     
     bool intersect(Ray* r, RaycastHit* hit);
 
-    Sphere(vec3 pos, float rad, int id, Material* m) : center(pos), radius(rad)
+    Sphere(vec3 pos, float rad, int id, std::shared_ptr<Material> m) : center(pos), radius(rad)
     {
         objectId = id;
         radius2 = radius*radius;

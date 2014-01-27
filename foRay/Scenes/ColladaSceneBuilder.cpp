@@ -72,10 +72,15 @@ void ColladaSceneBuilder::buildCamera()
         iter = strtok(NULL," ");
     }
     
-    scene->cam.transform = mat4(elements[0], elements[1], elements[2], elements[3],
+    
+    scene->cam.transform = mat4(elements[0], elements[4], elements[8], elements[12],
+                                elements[1], elements[5], elements[9], elements[13],
+                                elements[2], elements[6], elements[10], elements[14],
+                                elements[3], elements[7], elements[11], elements[15]);
+   /* scene->cam.transform = mat4(elements[0], elements[1], elements[2], elements[3],
                                 elements[4], elements[5], elements[6], elements[7],
                                 elements[8], elements[9], elements[10], elements[11],
-                                elements[12], elements[13], elements[14], elements[15]);
+                                elements[12], elements[13], elements[14], elements[15]);*/
     
     fprintf(stdout, "Success: Built Camera from collada file\n");
 }
@@ -142,12 +147,15 @@ void ColladaSceneBuilder::buildMaterials()
     xml_node<>* materialsRoot = getChild(root, "library_effects");
     xml_node<>* effectIter = materialsRoot->first_node("effect");
     
+    char* effectName;
+    
     int count = 0;
     while(effectIter != NULL)
     {
         count++;
         //char* effectName = effectIter->first_attribute("id")->value();
         std::map<std::string, std::string> materialProperties;
+        effectName = effectIter->first_attribute("id")->value();
         
         xml_node<>* profile = effectIter->first_node("profile_COMMON");
         xml_node<>* technique = profile->first_node("technique");
@@ -165,11 +173,24 @@ void ColladaSceneBuilder::buildMaterials()
         }
         
         MaterialProperties properties = parseMaterialProperties(materialProperties);
-        
-        materials["effectName"] = MaterialFactory::build(properties, materialProperties["type"]);
+        std::shared_ptr<Material> m = MaterialFactory::build(properties, materialProperties["type"]);
+        materials[effectName] = MaterialFactory::build(properties, materialProperties["type"]);
         
         effectIter = effectIter->next_sibling();
     }
+    
+    xml_node<>* libraryMaterialsRoot = getChild(root, "library_materials");
+    xml_node<>* lmIter = libraryMaterialsRoot->first_node();
+    
+    while (lmIter != NULL)
+    {
+        xml_node<>* effectVal = lmIter->first_node();
+        char* effectMatName = lmIter->first_attribute("id")->value();
+        std::shared_ptr<Material> m = materials[effectName];
+        materials[effectMatName] = materials[effectName];
+        lmIter = lmIter->next_sibling();
+    }
+    
     fprintf(stdout, "Success: Built %i materials from collada file\n", count);
     
 }
@@ -240,15 +261,15 @@ void ColladaSceneBuilder::buildMeshes()
         for (int tri = 0; tri < numTris; tri++)
         {
             Triangle t;
-            t.A = vec3( positions[indices[tri*6]],      positions[indices[tri*6] + 1],    positions[indices[tri*6] + 2 ]);
-            t.na = vec3(normals  [indices[tri*6 + 1]],  normals[indices[tri*6 + 1] + 1],  normals[indices[tri*6 + 1] + 2]);
+            t.A = vec3( positions[indices[tri*6]*3],      positions[indices[tri*6]*3 + 1],    positions[indices[tri*6]*3 + 2 ]);
+            t.na = vec3(normals  [indices[tri*6 + 1]*3],  normals[indices[tri*6 + 1] *3+ 1],  normals[indices[tri*6 + 1]*3 + 2]);
             
-            t.B = vec3( positions[indices[tri*6 +2 ]],  positions[indices[tri*6 + 2] +1], positions[indices[tri*6 + 2]+2]);
-            t.nb = vec3(normals[indices[tri*6+3]],      normals[indices[tri*6 + 3]+1],    normals[indices[tri*6 +3]+2]);
+            t.B = vec3( positions[indices[tri*6 +2 ]*3],  positions[indices[tri*6 + 2]*3 +1], positions[indices[tri*6 + 2]*3+2]);
+            t.nb = vec3(normals[indices[tri*6+3]*3],      normals[indices[tri*6 + 3]*3+1],    normals[indices[tri*6 +3]*3+2]);
             
-            t.C = vec3( positions[indices[tri*6 + 4]],  positions[indices[tri*6 + 4]+1],  positions[indices[tri*6 + 4]+2]);
-            t.nc = vec3(normals[indices[tri*6 + 5]],    normals[indices[tri*6 + 5]+1],    normals[indices[tri*6 + 5]+2]);
-        
+            t.C = vec3( positions[indices[tri*6 + 4]*3],  positions[indices[tri*6 + 4]*3+1],  positions[indices[tri*6 + 4]*3+2]);
+            t.nc = vec3(normals[indices[tri*6 + 5]*3],    normals[indices[tri*6 + 5]*3+1],    normals[indices[tri*6 + 5]*3+2]);
+            
             mesh->AddTriangle(t);
         }
         
@@ -266,10 +287,10 @@ void ColladaSceneBuilder::buildMeshes()
             mIter = strtok(NULL, " ");
         }
         
-        mesh->setTransform(mat4(meshElements[0], meshElements[1], meshElements[2], meshElements[3],
-                                    meshElements[4], meshElements[5], meshElements[6], meshElements[7],
-                                    meshElements[8], meshElements[9], meshElements[10], meshElements[11],
-                                    meshElements[12], meshElements[13], meshElements[14], meshElements[15]));
+        mesh->setTransform(mat4(meshElements[0], meshElements[4], meshElements[8], meshElements[12],
+                                    meshElements[1], meshElements[5], meshElements[9], meshElements[13],
+                                    meshElements[2], meshElements[6], meshElements[10], meshElements[14],
+                                    meshElements[3], meshElements[7], meshElements[11], meshElements[15]));
         
 
         
@@ -282,9 +303,17 @@ void ColladaSceneBuilder::buildMeshes()
             xml_node<>* mat = techniqueCommon->first_node("instance_material");
             char* materialName = mat->first_attribute("symbol")->value();
             
-            mesh->setMaterial(materials[materialName]);
-
+            std::shared_ptr<Material> m = materials[materialName];
+            if (m != NULL)
+            {
+                mesh->setMaterial(m);
+            }
+            else
+            {
+                mesh->setMaterial(MaterialFactory::buildDefault());
+            }
         }
+        else mesh->setMaterial(MaterialFactory::buildDefault());
         
         geometryIter= geometryIter->next_sibling();
         
@@ -344,10 +373,10 @@ LightProperties ColladaSceneBuilder::parseLightProperties(std::map<std::string,s
     }
     
     
-    properties.transform =  mat4(elements[0], elements[1], elements[2], elements[3],
-                                 elements[4], elements[5], elements[6], elements[7],
-                                 elements[8], elements[9], elements[10], elements[11],
-                                 elements[12], elements[13], elements[14], elements[15]);
+    properties.transform =  mat4(elements[0], elements[4], elements[8], elements[12],
+                                 elements[1], elements[5], elements[9], elements[13],
+                                 elements[2], elements[6], elements[10], elements[14],
+                                 elements[3], elements[7], elements[11], elements[15]);
     
     
     

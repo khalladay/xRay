@@ -17,7 +17,7 @@ public:
     vec3 center;
     vec3 n;
     
-    Plane(vec3 position, vec3 normal, Material *mat) : center(position), n(normal)
+    Plane(vec3 position, vec3 normal, std::shared_ptr<Material> mat) : center(position), n(normal)
     {
         material = mat;
     }

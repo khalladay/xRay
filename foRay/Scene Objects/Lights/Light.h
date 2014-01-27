@@ -32,12 +32,14 @@ class Light
 public:
     Light(LightProperties properties);
     
-    vec3 getDirection();
-    vec3 getPosition();
+    vec3 getDirection() { return _position; }
+    vec3 getPosition()  { return _direction; }
     
     ~Light(){}
     
 private:
+    vec3 _position;
+    vec3 _direction;
     mat4 transform;
 };
 #endif /* defined(__Clusterwink__Light__) */

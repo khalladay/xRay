@@ -30,5 +30,14 @@ public:
 
         return NULL;
     }
+    
+    static std::shared_ptr<Material> buildDefault()
+    {
+        MaterialProperties properties;
+        properties.ambient = vec4(0.5f);
+        properties.emission = vec4(0.0f);
+        properties.diffuse = vec4(0.8f);
+        return std::shared_ptr<Material>(new LambertMaterial(properties));
+    }
 };
 #endif /* defined(__foRay__MaterialFactory__) */
