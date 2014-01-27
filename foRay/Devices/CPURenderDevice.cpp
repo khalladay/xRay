@@ -73,7 +73,6 @@ void CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)
     
     //adjust for aspect ratio and camera fov
     
-    //TODO: add aspect ration
     float camX = remapX * tan(( (scene->cam.fov / 2.0f)*DEG2RAD));
     float camY = remapY * tan(( (scene->cam.fov/2.0f)*DEG2RAD));
 

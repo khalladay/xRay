@@ -1392,11 +1392,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Devices/CPURenderDevice.cpp"
-            timestampString = "412491224.231974"
+            timestampString = "412522485.955529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)"
             landmarkType = "5">
             <Locations>
@@ -1438,11 +1438,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Devices/CPURenderDevice.cpp"
-            timestampString = "412491224.231974"
+            timestampString = "412522485.955529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)"
             landmarkType = "5">
             <Locations>
@@ -1484,11 +1484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Devices/CPURenderDevice.cpp"
-            timestampString = "412518508.102568"
+            timestampString = "412522485.955529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1562,11 +1562,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Devices/CPURenderDevice.cpp"
-            timestampString = "412491224.231974"
+            timestampString = "412522485.955529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)"
             landmarkType = "5">
             <Locations>
@@ -1686,11 +1686,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Materials/LambertMaterial.h"
-            timestampString = "412521225.194713"
+            timestampString = "412522052.990965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "sample(const vec3&amp; samplePoint, const vec3&amp; normal, const vec3&amp; lightDirection, const vec3&amp; lightPosition, const vec3&amp; viewDirection)"
             landmarkType = "5">
          </BreakpointContent>

@@ -49,13 +49,14 @@ foray_image Renderer::render()
 
 void Renderer::renderTile(RenderTask task)
 {
+    
     for (int x = task.xMin; x < task.xMax; x++)
     {
         for (int y = task.yMin; y < task.yMax; y++)
         {
             
-            float ndcX = (2 * (x + 0.5) / (float)info->imageWidth - 1);//((float)x + 0.5f) / (float)info->imageWidth;
-            float ndcY = (1 - 2 * (y + 0.5) / (float)info->imageHeight);//((float)y + 0.5f) / (float)info->imageHeight;
+            float ndcX = (2 * (x + 0.5) / (float)info->imageWidth - 1) * ((float)info->imageWidth/(float)info->imageHeight);
+            float ndcY = (1 - 2 * (y + 0.5) / (float)info->imageHeight);
             
             imageData[x][y] = device->traceNDCPoint(ndcX, ndcY);
         }

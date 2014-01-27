@@ -43,7 +43,7 @@ void writeArrayToFile(foray_image imageData, int width, int height)
 int main(int argc, const char * argv[])
 {
     RenderProductInfo info;
-    info.imageHeight = 800;
+    info.imageHeight = 600;
     info.imageWidth = 800;
 
     std::unique_ptr<Scene> scene = SceneDirector::buildScene(new ColladaSceneBuilder("/Users/kylehalladay/Documents/Development/Mac OS X/foRay/res/color2.dae"));
