@@ -32,7 +32,7 @@ public:
     //this method will return the appropriate subclass based on system stats
     static std::unique_ptr<RenderDevice> create(std::unique_ptr<Scene> scene)
     {
-        return createSceneTestDevice(std::unique_ptr<Scene>(std::move(scene)));
+        return createCPUDevice(std::unique_ptr<Scene>(std::move(scene)));
     }
     
     RenderDevice(std::unique_ptr<Scene> scene)

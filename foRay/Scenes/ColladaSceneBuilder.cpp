@@ -186,8 +186,10 @@ void ColladaSceneBuilder::buildMaterials()
     {
         xml_node<>* effectVal = lmIter->first_node();
         char* effectMatName = lmIter->first_attribute("id")->value();
+        std::string matName = std::string(effectVal->first_attribute("url")->value());
+        matName = matName.substr(1, matName.length());
         std::shared_ptr<Material> m = materials[effectName];
-        materials[effectMatName] = materials[effectName];
+        materials[effectMatName] = materials[matName];
         lmIter = lmIter->next_sibling();
     }
     

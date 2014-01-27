@@ -21,7 +21,7 @@ void writeArrayToFile(foray_image imageData, int width, int height)
 {
     fprintf(stdout, "Writing file");
     std::ofstream ofs;
-    ofs.open("/Users/kylehalladay/Desktop/foray_output.ppm");
+    ofs.open("/Users/kylehalladay/Desktop/foray_output2.ppm");
     ofs << "P6\n" << width << " " << height << "\n255\n";
     
     for (uint32_t x = 0; x < height; ++x) {
@@ -46,7 +46,7 @@ int main(int argc, const char * argv[])
     info.imageHeight = 800;
     info.imageWidth = 800;
 
-    std::unique_ptr<Scene> scene = SceneDirector::buildScene(new ColladaSceneBuilder("/Users/kylehalladay/Documents/Development/Mac OS X/foRay/res/scene3.dae"));
+    std::unique_ptr<Scene> scene = SceneDirector::buildScene(new ColladaSceneBuilder("/Users/kylehalladay/Documents/Development/Mac OS X/foRay/res/color2.dae"));
     Renderer renderer(&info, RenderDevice::create(std::unique_ptr<Scene>(std::move(scene))));
     foray_image image = renderer.render();
     

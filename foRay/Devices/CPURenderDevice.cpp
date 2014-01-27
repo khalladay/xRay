@@ -68,13 +68,15 @@ void CPURenderDevice::traceRay(Ray* r, RaycastHit* hit, vec3* col)
 void CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)
 {
     //convert NDC to Screen Space
-    float remapX = 1.0f - 2.0f * ndcX;
-    float remapY = 1.0f - 2.0f * ndcY;
+    float remapX = ndcX;
+    float remapY = ndcY;
     
     //adjust for aspect ratio and camera fov
-    float camX = (2.0f * remapX - 1.0f) * (scene->cam.aspectRatio) * tan((scene->cam.fov*DEG2RAD) / 2.0f);
-    float camY = (1.0f - 2.0f * remapY) * tan((scene->cam.fov*DEG2RAD) / 2.0f);
     
+    //TODO: add aspect ration
+    float camX = remapX * tan(( (scene->cam.fov / 2.0f)*DEG2RAD));
+    float camY = remapY * tan(( (scene->cam.fov/2.0f)*DEG2RAD));
+
     //camera by default is always looking down negative Z
     //and is 1 unit away from camera plane
     
@@ -83,7 +85,6 @@ void CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)
     //transform orign and camSpacePixel by camera matrix
     vec4 origin =  scene->cam.transform * vec4(0.0f, 0.0f, 0.0f, 1.0f);
     vec4 camSpacePixel = scene->cam.transform * vec4(camX, camY, -1.0f, 1.0f);
-
     //get the direction vector
     vec4 dir = normalize(camSpacePixel - origin);
     

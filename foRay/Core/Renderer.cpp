@@ -24,9 +24,6 @@ foray_image Renderer::render()
     int tileHeight = info->imageHeight/2;
     int tileWidth = info->imageWidth / (numCores/2);
     
-    printf("Tile width: %i\n", tileWidth);
-    printf("Tile height: %i\n", tileHeight);
-    
     for (int i = 0; i < numCores / 2; i++)
     {
         ivec2 originA = ivec2(i*tileWidth,0);
@@ -56,10 +53,11 @@ void Renderer::renderTile(RenderTask task)
     {
         for (int y = task.yMin; y < task.yMax; y++)
         {
-            float ndcX = (x + 0.5f) / (float)info->imageWidth;
-            float ndcY = (y + 0.5f) / (float)info->imageHeight;
             
-            imageData[x][y] = device->traceNDCPoint(x, y);
+            float ndcX = (2 * (x + 0.5) / (float)info->imageWidth - 1);//((float)x + 0.5f) / (float)info->imageWidth;
+            float ndcY = (1 - 2 * (y + 0.5) / (float)info->imageHeight);//((float)y + 0.5f) / (float)info->imageHeight;
+            
+            imageData[x][y] = device->traceNDCPoint(ndcX, ndcY);
         }
     }
 }
