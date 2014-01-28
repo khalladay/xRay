@@ -24,7 +24,7 @@ public:
     
     virtual vec3 sample(const vec3& samplePoint, const vec3& normal, const vec3& lightDirection, const vec3& lightPosition, const vec3& viewDirection)
     {
-        return vec3(diffuse.x, diffuse.y, diffuse.z);
+        return vec3(diffuse.x, diffuse.y, diffuse.z) *( vec3(1.0f) * max(0.0f, dot(lightDirection, normal)));
     }
     
     ~LambertMaterial(){}

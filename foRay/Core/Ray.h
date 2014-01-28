@@ -15,15 +15,24 @@ using namespace glm;
 class Ray
 {
 public:
+    
+    enum RayType
+    {
+        PrimaryRay,
+        ShadowRay
+    };
+    
     vec3 origin;
     vec3 direction;
     
     float tmin, tmax;
     
+    RayType type;
+    
     Ray(){}
     
-    Ray(vec3 orig, vec3 dir, float min, float max) :
-    origin(orig), direction(dir),tmin(min), tmax(max)
+    Ray(RayType rayType, vec3 orig, vec3 dir, float min, float max) :
+    type(rayType), origin(orig), direction(dir),tmin(min), tmax(max)
     {
         direction = (dir);
     }

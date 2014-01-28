@@ -32,8 +32,8 @@ class Light
 public:
     Light(LightProperties properties);
     
-    vec3 getDirection() { return _position; }
-    vec3 getPosition()  { return _direction; }
+    vec3 getDirection() { return _direction; }
+    vec3 getPosition()  { return _position; }
     
     ~Light(){}
     

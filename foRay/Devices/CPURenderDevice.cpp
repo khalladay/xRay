@@ -53,15 +53,31 @@ void CPURenderDevice::traceRay(Ray* r, RaycastHit* hit, vec3* col)
                 
                 vec3 hitPoint = r->origin + r->direction*hit->t;
                 
+                //color at primary ray
                 *col = scene->traceables[i]->material->sample(hitPoint, hit->contactNormal, scene->lights[0]->getDirection(), vec3(0.0f), vec3(0.0f));
 
+                //color from shadow ray
+                
+                if (r->type == Ray::RayType::PrimaryRay)
+                {
+                    Ray shadowRay(Ray::RayType::ShadowRay, r->origin + r->direction*(0.99f*hit->t), normalize(-scene->lights[0]->getDirection()), 0.0f, 900.1f);
+                    RaycastHit shadowHit;
+                    vec3 shadowCol = vec3(0.0f);
+                    
+                    traceRay(&shadowRay, &shadowHit, &shadowCol);
+                    if (shadowHit.t <= shadowRay.tmax)
+                    {
+                        *col = vec3(0.0f);
+                    }
+                }
             }
         }
     }
     
     if (!didHit)
     {
-        *col = vec3(0.0f, 0.0f, 0.0f);
+        hit->t = r->tmax+1;
+        *col = vec3(0.05);
     }
 }
 
@@ -73,8 +89,10 @@ void CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)
     
     //adjust for aspect ratio and camera fov
     
-    float camX = remapX * tan(( (scene->cam.fov / 2.0f)*DEG2RAD));
-    float camY = remapY * tan(( (scene->cam.fov/2.0f)*DEG2RAD));
+    //TODO: explain the 3.0 instead of a 2.0
+    //should be by 2, but blender appears to divide by 3 for some reason
+    float camX = remapX * tan(( ((scene->cam.fov*DEG2RAD) / 3.0f)));
+    float camY = remapY * tan(( ((scene->cam.fov*DEG2RAD) / 3.0f)));
 
     //camera by default is always looking down negative Z
     //and is 1 unit away from camera plane
@@ -88,6 +106,7 @@ void CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)
     vec4 dir = normalize(camSpacePixel - origin);
     
     //origin, direction, tmin, tmax
+    r->type = Ray::RayType::PrimaryRay;
     r->origin =vec3(origin.x, origin.y, origin.z);
     r->direction = vec3(dir.x, dir.y, dir.z);
     r->tmin = scene->cam.zNear;

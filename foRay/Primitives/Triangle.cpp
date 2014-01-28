@@ -53,7 +53,7 @@ bool Triangle::intersect(Ray *r, RaycastHit* hit)
     
     hit->t = t;
     
-    hit->contactNormal = N;
+    hit->contactNormal = normalForBarycentricPoint(u, v);
     
     return true;
 

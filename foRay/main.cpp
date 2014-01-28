@@ -21,7 +21,7 @@ void writeArrayToFile(foray_image imageData, int width, int height)
 {
     fprintf(stdout, "Writing file");
     std::ofstream ofs;
-    ofs.open("/Users/kylehalladay/Desktop/foray_output2.ppm");
+    ofs.open("/Users/kylehalladay/Desktop/foray_output3.ppm");
     ofs << "P6\n" << width << " " << height << "\n255\n";
     
     for (uint32_t x = 0; x < height; ++x) {
@@ -29,9 +29,10 @@ void writeArrayToFile(foray_image imageData, int width, int height)
 
             vec3 col = imageData[y][x];
             char pixel[3];
-            pixel[0] = (unsigned char)min((int)(col.r*255.0f), 255);
-            pixel[1] = (unsigned char)min((int)(col.g*255.0f), 255);
-            pixel[2] = (unsigned char)min((int)(col.b*255.0f), 255);
+            pixel[0] = (unsigned char)(std::max(0.f, std::min(255.f, powf(col.r, 1.0f/2.2) * 255.0f + 0.5f)));
+            pixel[1] = (unsigned char)(std::max(0.f, std::min(255.f, powf(col.g, 1.0f/2.2) * 255.0f + 0.5f)));
+            pixel[2] = (unsigned char)(std::max(0.f, std::min(255.f, powf(col.b, 1.0f/2.2) * 255.0f + 0.5f)));
+
 
             ofs.write(pixel, 3);
 		}
@@ -43,10 +44,10 @@ void writeArrayToFile(foray_image imageData, int width, int height)
 int main(int argc, const char * argv[])
 {
     RenderProductInfo info;
-    info.imageHeight = 600;
-    info.imageWidth = 800;
+    info.imageHeight = 640;
+    info.imageWidth = 960;
 
-    std::unique_ptr<Scene> scene = SceneDirector::buildScene(new ColladaSceneBuilder("/Users/kylehalladay/Documents/Development/Mac OS X/foRay/res/color2.dae"));
+    std::unique_ptr<Scene> scene = SceneDirector::buildScene(new ColladaSceneBuilder("/Users/kylehalladay/Documents/Development/Mac OS X/foRay/res/poly_scene2.dae"));
     Renderer renderer(&info, RenderDevice::create(std::unique_ptr<Scene>(std::move(scene))));
     foray_image image = renderer.render();
     

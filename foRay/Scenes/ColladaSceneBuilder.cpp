@@ -278,6 +278,14 @@ void ColladaSceneBuilder::buildMeshes()
         xml_node<>* visualSceneRoot = root->first_node("library_visual_scenes");
         xml_node<>* visualScene = visualSceneRoot->first_node("visual_scene");
         xml_node<>* visualMeshNode = getChild(visualScene, "node", "name", strtok(meshName, "-"));
+        
+        if (visualMeshNode == NULL)
+        {
+            fprintf(stdout, "Warning: Mesh in Library Geometries not found in Scene %s\n", meshName);
+            geometryIter= geometryIter->next_sibling();
+            continue;
+        }
+        
         xml_node<>* meshMatrix = visualMeshNode->first_node("matrix");
         
         std::vector<float> meshElements;
@@ -375,10 +383,10 @@ LightProperties ColladaSceneBuilder::parseLightProperties(std::map<std::string,s
     }
     
     
-    properties.transform =  mat4(elements[0], elements[4], elements[8], elements[12],
-                                 elements[1], elements[5], elements[9], elements[13],
-                                 elements[2], elements[6], elements[10], elements[14],
-                                 elements[3], elements[7], elements[11], elements[15]);
+    properties.transform =  mat4(matrixElements[0], matrixElements[4], matrixElements[8], matrixElements[12],
+                                 matrixElements[1], matrixElements[5], matrixElements[9], matrixElements[13],
+                                 matrixElements[2], matrixElements[6], matrixElements[10], matrixElements[14],
+                                 matrixElements[3], matrixElements[7], matrixElements[11], matrixElements[15]);
     
     
     
