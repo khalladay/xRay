@@ -39,8 +39,6 @@ foray_image Renderer::render()
         threads.add_thread(threadB);
     }
     
-    
-    
     //start all tasks (blocks until completed)
     threads.join_all();
         

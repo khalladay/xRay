@@ -14,6 +14,7 @@
 #include "glm.hpp"
 #include "Material.h"
 #include <memory>
+#include <string>
 using namespace glm;
 
 class Traceable
@@ -21,6 +22,8 @@ class Traceable
 public:
     int objectId;
     std::shared_ptr<Material> material;
+    std::string name;
+    mat4 transform;
     
     Traceable()
     {

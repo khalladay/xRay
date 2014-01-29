@@ -666,11 +666,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/main.cpp"
-            timestampString = "412570469.277178"
+            timestampString = "412650157.161776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122">
+            startingLineNumber = "125"
+            endingLineNumber = "125">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1020,11 +1020,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Primitives/Traceable.h"
-            timestampString = "412259494.331466"
+            timestampString = "412658131.323328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "class Traceable"
             landmarkType = "3">
          </BreakpointContent>
@@ -1392,11 +1392,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Devices/CPURenderDevice.cpp"
-            timestampString = "412574581.787474"
+            timestampString = "412660737.483849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)"
             landmarkType = "5">
             <Locations>
@@ -1438,11 +1438,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Devices/CPURenderDevice.cpp"
-            timestampString = "412574581.787474"
+            timestampString = "412660737.483849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)"
             landmarkType = "5">
             <Locations>
@@ -1484,11 +1484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Devices/CPURenderDevice.cpp"
-            timestampString = "412574581.787474"
+            timestampString = "412660737.483849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1499,28 +1499,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "foRay/Primitives/Triangle.h"
-            timestampString = "412564632.369853"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "transformByMatrix(glm::mat4 t)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "foRay/Scene Objects/TriMesh.h"
-            timestampString = "412476348.002428"
+            timestampString = "412655591.308764"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "convertToWorldSpace()"
             landmarkType = "5">
             <Locations>
@@ -1562,11 +1546,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Devices/CPURenderDevice.cpp"
-            timestampString = "412574581.787474"
+            timestampString = "412660737.483849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)"
             landmarkType = "5">
             <Locations>
@@ -1622,11 +1606,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Devices/CPURenderDevice.cpp"
-            timestampString = "412574581.787474"
+            timestampString = "412660737.483849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1746,11 +1730,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Primitives/Triangle.h"
-            timestampString = "412564632.369853"
+            timestampString = "412658131.323328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "normalForBarycentricPoint(float u, float v)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1762,11 +1746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Primitives/Triangle.cpp"
-            timestampString = "412561151.244589"
+            timestampString = "412657733.608016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "Triangle::intersect(Ray *r, RaycastHit* hit)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1778,11 +1762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Primitives/Triangle.cpp"
-            timestampString = "412561152.181822"
+            timestampString = "412657733.608016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "Triangle::intersect(Ray *r, RaycastHit* hit)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1794,11 +1778,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Primitives/Triangle.h"
-            timestampString = "412564632.369853"
+            timestampString = "412658131.323328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "normalForBarycentricPoint(float u, float v)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1922,7 +1906,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foRay/Materials/LambertMaterial.h"
@@ -2157,13 +2141,201 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "foRay/Devices/CPURenderDevice.cpp"
-            timestampString = "412573087.368922"
+            filePath = "foRay/Primitives/Triangle.cpp"
+            timestampString = "412657733.608016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "Triangle::intersect(Ray *r, RaycastHit* hit)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/Devices/CPURenderDevice.cpp"
+            timestampString = "412656873.487733"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "CPURenderDevice::traceShadowRay(Ray* r, Traceable* ignore, RaycastHit* hit, vec3* col)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/Primitives/Triangle.h"
+            timestampString = "412658131.323328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "transformByMatrix(glm::mat4 t)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/Primitives/Triangle.h"
+            timestampString = "412658189.697103"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "transformByMatrix(glm::mat4 t)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/Scenes/ColladaSceneBuilder.cpp"
+            timestampString = "412659714.716596"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "ColladaSceneBuilder::buildLights()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/Scenes/ColladaSceneBuilder.cpp"
+            timestampString = "412659780.073174"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "ColladaSceneBuilder::buildLights()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/Scenes/ColladaSceneBuilder.cpp"
+            timestampString = "412659990.465352"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "ColladaSceneBuilder::buildLights()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/Devices/CPURenderDevice.cpp"
+            timestampString = "412660586.441077"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "CPURenderDevice::traceRay(Ray* r, RaycastHit* hit, vec3* col)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CPURenderDevice::traceRay(Ray*, RaycastHit*, glm::detail::tvec3&lt;float&gt;*)"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/Devices/CPURenderDevice.cpp"
+                  timestampString = "412660588.885815"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1440">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CPURenderDevice::traceRay(Ray*, RaycastHit*, glm::detail::tvec3&lt;float&gt;*)"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/Devices/CPURenderDevice.cpp"
+                  timestampString = "412660588.886268"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1489">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CPURenderDevice::traceRay(Ray*, RaycastHit*, glm::detail::tvec3&lt;float&gt;*)"
+                  moduleName = "foRay"
+                  urlString = "file:///Users/kylehalladay/Documents/Development/Mac%20OS%20X/foRay/foRay/Devices/CPURenderDevice.cpp"
+                  timestampString = "412660588.886839"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1526">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/Devices/CPURenderDevice.cpp"
+            timestampString = "412660596.632871"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "CPURenderDevice::traceRay(Ray* r, RaycastHit* hit, vec3* col)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foRay/Materials/LambertMaterial.h"
+            timestampString = "412660836.585221"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "LambertMaterial(MaterialProperties properties)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

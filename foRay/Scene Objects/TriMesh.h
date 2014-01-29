@@ -22,7 +22,6 @@ class TriMesh : public Traceable
 {
 public:
     std::vector<Triangle> triangles;
-    
     TriMesh(){}
     
     void AddTriangle(Triangle t)
@@ -52,7 +51,7 @@ public:
                 }
             }
         }
-       
+        
         return hitFlag;
     }
     
@@ -73,8 +72,6 @@ public:
     {
         material = mat;
     }
-private:
-    mat4 transform;
 
 };
 #endif /* defined(__Clusterwink__TriMesh__) */

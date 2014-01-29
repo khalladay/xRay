@@ -45,7 +45,7 @@ vec3 SceneTestRenderDevice::traceNDCPoint(float ndcX, float ndcY)
 
 void SceneTestRenderDevice::traceRay(Ray* r, RaycastHit* hit, vec3* col)
 {
-    vec3 LIGHT_DIR = normalize(vec3(-0.5, 0.0, -0.5));
+    vec3 LIGHT_DIR = normalize(vec3(-0.5, -0.5, 0.5));
     bool didHit = false;
     
     float t = r->tmax;
@@ -62,6 +62,20 @@ void SceneTestRenderDevice::traceRay(Ray* r, RaycastHit* hit, vec3* col)
                 vec3 hitPoint = r->origin + r->direction*hit->t;
                 
                 *col = scene->traceables[i]->material->sample(hitPoint, hit->contactNormal, LIGHT_DIR, vec3(0.0f), vec3(0.0f));
+                
+                
+                if (r->type == Ray::RayType::PrimaryRay)
+                {
+                    Ray shadowRay(Ray::RayType::ShadowRay, hitPoint, normalize((cameraPosition+vec3(15.0, 0.0, 3.0))-hitPoint), 0.0f, 900.1f);
+                    RaycastHit shadowHit;
+                    vec3 shadowCol = vec3(0.0f);
+                    
+                    traceRay(&shadowRay, &shadowHit, &shadowCol);
+                    if (shadowHit.t <= shadowRay.tmax)
+                    {
+                        *col = vec3(0.0f);
+                    }
+                }
             }
         }
     }
@@ -73,9 +87,9 @@ void SceneTestRenderDevice::traceRay(Ray* r, RaycastHit* hit, vec3* col)
 void SceneTestRenderDevice::rayForPixel(Ray* r, int x, int y)
 {
     
-    vec3 camPos = vec3(10.0f, 10.0f, 0.0f);
+    vec3 camPos = vec3(-10.0f, -10.0f, 15.0f);
     vec3 lookPos = vec3(0.0f, 0.0f, 0.0f);
-    vec3 camUp = vec3(0.0f, 0.0f, 1.0f);
+    vec3 camUp = vec3(0.0f, 0.0f, -1.0f);
     
     vec2 uv = -1.0f + 2.0f * vec2(x, y) / vec2(800.0f);
     
@@ -87,9 +101,10 @@ void SceneTestRenderDevice::rayForPixel(Ray* r, int x, int y)
     vec3 fragWorldPos = viewCenter + (uv.x * viewPlaneU * 1.0f) + (uv.y * viewPlaneV);
     vec3 fragWorldToCamPos = normalize(fragWorldPos - camPos);
     
+    r->type = Ray::RayType::PrimaryRay;
     r->origin = camPos;
     r->direction = normalize(fragWorldToCamPos);
-    r->tmin = 0.0;
+    r->tmin = 0.1;
     r->tmax = 1000.0f;
 }
 

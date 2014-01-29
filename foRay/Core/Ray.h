@@ -32,9 +32,8 @@ public:
     Ray(){}
     
     Ray(RayType rayType, vec3 orig, vec3 dir, float min, float max) :
-    type(rayType), origin(orig), direction(dir),tmin(min), tmax(max)
+    type(rayType), origin(orig), direction(normalize(dir)),tmin(min), tmax(max)
     {
-        direction = (dir);
     }
     
     ~Ray(){}

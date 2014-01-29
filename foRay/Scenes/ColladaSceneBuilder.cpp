@@ -123,8 +123,8 @@ void ColladaSceneBuilder::buildLights()
         
         if (sceneLight == NULL)
         {
-            fprintf(stderr, "ERROR: No camera transform found in collada file. %s : %d!",__FILE__, __LINE__);
-            return;
+            sceneLight = getChild(visScene, "node", "name", std::string(strtok(lightName, ".")));
+            //fprintf(stderr, "ERROR: No light transform found in collada file. %s : %d!\n",__FILE__, __LINE__);
         }
         
         char* matrix = sceneLight->first_node("matrix")->value();
@@ -218,7 +218,7 @@ void ColladaSceneBuilder::buildMeshes()
         xml_node<>* meshRoot = geometryIter->first_node("mesh");
         
         char* meshName = geometryIter->first_attribute("id")->value();
-
+        mesh->name = meshName;
         //read in vert positions
         std::string meshAttribName = std::string(meshName)+"-positions";
         xml_node<>* meshPositionSource = getChild(meshRoot, "source", "id", meshAttribName);

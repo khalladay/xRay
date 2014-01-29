@@ -40,36 +40,69 @@ vec3 CPURenderDevice::traceNDCPoint(float ndcX, float ndcY)
 void CPURenderDevice::traceRay(Ray* r, RaycastHit* hit, vec3* col)
 {
     bool didHit = false;
-    float t = r->tmax;
+    float t = r->tmax+1;
     
     for (int i = 0; i < scene->traceables.size(); i++)
     {
         if (scene->traceables[i]->intersect(r, hit))
         {
-            if (hit->t <= t)
+            if (hit->t <= t && hit->t > r->tmin)
             {
                 t = hit->t;
                 didHit = true;
                 
                 vec3 hitPoint = r->origin + r->direction*hit->t;
-                
+                if (hit->t < 0.1f)
+                {
+                    printf("%s\n", scene->traceables[i]->name.c_str());
+                }
                 //color at primary ray
                 *col = scene->traceables[i]->material->sample(hitPoint, hit->contactNormal, scene->lights[0]->getDirection(), vec3(0.0f), vec3(0.0f));
 
                 //color from shadow ray
                 
-                if (r->type == Ray::RayType::PrimaryRay)
+               if (r->type == Ray::RayType::PrimaryRay)
                 {
-                    Ray shadowRay(Ray::RayType::ShadowRay, r->origin + r->direction*(0.99f*hit->t), normalize(-scene->lights[0]->getDirection()), 0.0f, 900.1f);
+                    Ray shadowRay(Ray::RayType::ShadowRay, hitPoint, scene->lights[0]->getDirection(), r->tmin, r->tmax);
                     RaycastHit shadowHit;
                     vec3 shadowCol = vec3(0.0f);
                     
-                    traceRay(&shadowRay, &shadowHit, &shadowCol);
-                    if (shadowHit.t <= shadowRay.tmax)
+                    traceShadowRay(&shadowRay,scene->traceables[i].get(), &shadowHit, &shadowCol);
+                    if (shadowHit.t < shadowRay.tmax)
                     {
                         *col = vec3(0.0f);
                     }
                 }
+            }
+        }
+    }
+    
+    if (!didHit)
+    {
+        hit->t = r->tmax+1;
+        *col = vec3(0.05);
+    }
+}
+
+void CPURenderDevice::traceShadowRay(Ray* r, Traceable* ignore, RaycastHit* hit, vec3* col)
+{
+    bool didHit = false;
+    float t = r->tmax+1;
+    
+    for (int i = 0; i < scene->traceables.size(); i++)
+    {
+        if (scene->traceables[i].get() == ignore)
+        {
+            continue;
+        }
+        if (scene->traceables[i]->intersect(r, hit))
+        {
+            if (hit->t <= t && hit->t > 0.0001 )
+            {
+                t = hit->t;
+                didHit = true;
+                vec3 hitPoint = r->origin + r->direction*hit->t;
+                *col = scene->traceables[i]->material->sample(hitPoint, hit->contactNormal, -scene->lights[0]->getDirection(), vec3(0.0f), vec3(0.0f));
             }
         }
     }
@@ -105,6 +138,7 @@ void CPURenderDevice::rayForPixel(Ray* r, float ndcX, float ndcY)
     //get the direction vector
     vec4 dir = normalize(camSpacePixel - origin);
     
+    cameraPosition = vec3(origin.x, origin.y, origin.z);
     //origin, direction, tmin, tmax
     r->type = Ray::RayType::PrimaryRay;
     r->origin =vec3(origin.x, origin.y, origin.z);

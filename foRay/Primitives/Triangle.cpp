@@ -12,14 +12,21 @@
 
 bool Triangle::intersect(Ray *r, RaycastHit* hit)
 {
-#define EPSILON 1e-6
+#define EPSILON 0.0001
     
     vec3 AB = B-A;
     vec3 AC = C-A;
     vec3 P = cross(r->direction, AC);
     float Mdet = dot(AB, P);
     
-    if (Mdet < 0) return false;
+    if (r->type == Ray::RayType::PrimaryRay)
+    {
+        if (Mdet < EPSILON) return false;
+    }
+    else if (Mdet < EPSILON && Mdet > -EPSILON)
+    {
+        return false;
+    }
     
     float invDet = 1/Mdet;
     vec3 OA = r->origin - A;
@@ -46,7 +53,7 @@ bool Triangle::intersect(Ray *r, RaycastHit* hit)
     hit->v = v;
     
     float t = dot(AC, Q) * invDet;
-    if ( t < 0.0f )
+    if ( t < EPSILON )
     {
         return false;
     }

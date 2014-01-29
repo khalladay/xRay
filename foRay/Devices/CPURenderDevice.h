@@ -21,7 +21,7 @@ public:
     
 private:
     vec3 cameraPosition;
-    
+    void traceShadowRay(Ray* r, Traceable* ignore, RaycastHit* hit, vec3* col);
     void rayForPixel(Ray* r, float ndcX, float ndcY);
     void traceRay(Ray* r, RaycastHit* hit, vec3* output);
 };

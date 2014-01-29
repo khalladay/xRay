@@ -23,21 +23,17 @@ public:
     vec3 nb;
     vec3 nc;
     
-    vec3 N;
-    mat4 transform;
-    
     bool intersect(Ray* r, RaycastHit* hit);
     
-    Triangle(vec3 a, vec3 b, vec3 c, vec3 n, std::shared_ptr<Material> m ) : A(a), B(b), C(c), N(n)
+    Triangle(vec3 a, vec3 b, vec3 c, std::shared_ptr<Material> m ) : A(a), B(b), C(c)
     {
         material = m;
     }
     
     vec3 normalForBarycentricPoint(float u, float v)
     {
-        vec3 N = na + u * (nb - na) + v * (nc - na);
-        N /= length(N);
-        return normalize(N);
+        vec3 normal = na + u * (nb - na) + v * (nc - na);
+        return normalize(normal);
     }
     
     void transformByMatrix(glm::mat4 t)
@@ -60,9 +56,6 @@ public:
         
         vec4 tnc = transform * vec4(nc.x, nc.y, nc.z, 0.0f);
         nc = vec3(tnc.x, tnc.y, tnc.z);
-        
-        vec4 tN = transform * vec4(N.x, N.y, N.z, 1.0f);
-        N = vec3(tN.x, tN.y, tN.z);
     }
     
     Triangle(){}

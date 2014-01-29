@@ -57,6 +57,16 @@
             ReferencedContainer = "container:foRay.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "&quot;/Users/kylehalladay/Documents/Development/Mac OS X/foRay/res/poly_scene.dae&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "&quot;/Users/kylehalladay/Desktop/foray_output3.ppm&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
