@@ -1,12 +1,8 @@
 #xRay
 
-An extensible and customizable ray tracing renderer.
+A toy ray tracer. 
 
-### Philosophy
-
-xRay first and foremost is intended to be a high quality renderer in its own right. However, the intention is to structure this project in a way that is highly extensible and customizable, in order to provide a base from which to build more stylized or custom renderers for individual projects.
-
-###Current Version: 0.01
+###Recent Changes:
 * Blender COLLADA file parsing
 * Support for Directional lights only
 * Support for Lambert Materials only
